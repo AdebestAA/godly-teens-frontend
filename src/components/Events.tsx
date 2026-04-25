@@ -19,7 +19,7 @@ const Events: React.FC = () => {
 
           <p className="max-w-[400px] text-[14px] text-ink-60 leading-relaxed">
             Plan your year. Register online. Invite a friend. Every GTIM event
-            is a chance to grow, serve and belong..
+            is a chance to grow, serve and belong.
           </p>
         </div>
 
