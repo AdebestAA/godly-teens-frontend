@@ -148,31 +148,31 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.5 }}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10 pt-8 border-t border-white/20 max-w-[600px]"
+              className="flex flex-row items-center justify-between gap-4 pt-8 border-t border-white/20 overflow-x-auto pb-2 max-w-full"
             >
-              <motion.div whileHover={{ scale: 1.05 }} className="text-center">
-                <div className="font-fraunces text-[36px] font-bold text-gold leading-none mb-1">
+              <motion.div whileHover={{ scale: 1.05 }} className="min-w-24 text-center">
+                <div className="font-fraunces text-[32px] sm:text-[36px] font-bold text-gold leading-none mb-1">
                   12K+
                 </div>
-                <div className="text-[14px] text-white/80 font-medium">
+                <div className="text-[12px] sm:text-[14px] text-white/80 font-medium">
                   Teens Reached
                 </div>
               </motion.div>
 
-              <motion.div whileHover={{ scale: 1.05 }} className="text-center">
-                <div className="font-fraunces text-[36px] font-bold text-gold leading-none mb-1">
+              <motion.div whileHover={{ scale: 1.05 }} className="min-w-20 text-center">
+                <div className="font-fraunces text-[32px] sm:text-[36px] font-bold text-gold leading-none mb-1">
                   28
                 </div>
-                <div className="text-[14px] text-white/80 font-medium">
+                <div className="text-[12px] sm:text-[14px] text-white/80 font-medium">
                   Nations
                 </div>
               </motion.div>
 
-              <motion.div whileHover={{ scale: 1.05 }} className="text-center">
-                <div className="font-fraunces text-[36px] font-bold text-gold leading-none mb-1">
+              <motion.div whileHover={{ scale: 1.05 }} className="min-w-24 text-center">
+                <div className="font-fraunces text-[32px] sm:text-[36px] font-bold text-gold leading-none mb-1">
                   400+
                 </div>
-                <div className="text-[14px] text-white/80 font-medium">
+                <div className="text-[12px] sm:text-[14px] text-white/80 font-medium">
                   Resources
                 </div>
               </motion.div>

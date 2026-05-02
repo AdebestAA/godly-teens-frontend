@@ -79,30 +79,35 @@ const Nav: React.FC = () => {
             </motion.button>
           </div>
           <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden w-10 h-10 border border-line rounded-lg p-2.5 flex flex-col justify-center items-center"
+            className="md:hidden w-11 h-11 rounded-xl bg-white/95 shadow-sm border border-line flex items-center justify-center transition-all duration-200 hover:bg-white"
             aria-label="Menu"
           >
-            <motion.span
-              animate={{
-                rotate: isMenuOpen ? 45 : 0,
-                y: isMenuOpen ? 2 : 0,
-              }}
-              className="block h-0.5 bg-ink transition-transform duration-200"
-            ></motion.span>
-            <motion.span
-              animate={{ opacity: isMenuOpen ? 0 : 1 }}
-              className="block h-0.5 bg-ink transition-opacity duration-200"
-            ></motion.span>
-            <motion.span
-              animate={{
-                rotate: isMenuOpen ? -45 : 0,
-                y: isMenuOpen ? -2 : 0,
-              }}
-              className="block h-0.5 bg-ink transition-transform duration-200"
-            ></motion.span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              className="text-ink"
+            >
+              {isMenuOpen ? (
+                <>
+                  <path d="M6 6l12 12" />
+                  <path d="M18 6L6 18" />
+                </>
+              ) : (
+                <>
+                  <path d="M4 7h16" />
+                  <path d="M4 12h16" />
+                  <path d="M4 17h16" />
+                </>
+              )}
+            </svg>
           </motion.button>
         </div>
       </div>
@@ -151,7 +156,7 @@ const Nav: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full inline-flex items-center justify-center gap-2 px-[22px] py-3 text-[14px] font-semibold rounded-[10px] transition-all duration-220 border border-transparent bg-green-800 text-white hover:bg-green-900 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)] cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5.5 py-3 text-[14px] font-semibold rounded-[10px] transition-all duration-220 border border-transparent bg-green-800 text-white hover:bg-green-900 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)] cursor-pointer"
                   onClick={() => {
                     openJoinModal();
                     setIsMenuOpen(false);
