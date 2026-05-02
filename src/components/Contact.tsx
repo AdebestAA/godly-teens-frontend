@@ -183,7 +183,7 @@ const Contact: React.FC = () => {
             We reply within 48 hours.
           </p>
 
-          <div className="grid grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
               <label className="block text-[12px] font-semibold uppercase tracking-[0.05em] text-ink-60 mb-2">
                 First name

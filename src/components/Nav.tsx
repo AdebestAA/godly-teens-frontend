@@ -1,79 +1,169 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { useModalStore } from "../stores/modalStore";
 
 const Nav: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const openJoinModal = useModalStore((state) => state.openJoinModal);
+
   return (
     <nav className="sticky top-0 z-[100] bg-paper/92 backdrop-blur-[14px] border-b border-line">
-      <div className="max-w-[1280px] mx-auto px-7 flex items-center justify-between py-[18px]">
-        <a
-          href="#"
-          className="flex items-center gap-3 font-montserrat font-extrabold text-[17px] tracking-[-0.01em]"
-        >
-          <div className="w-10 h-10 bg-green-800 rounded-[10px] grid place-items-center text-gold font-fraunces font-bold text-[20px] relative">
-            G
-            <div className="absolute inset-1 border border-gold/35 rounded-[7px]"></div>
-          </div>
-          <div className="leading-[1.1]">
-            Godly Teens
-            <small className="block font-medium text-[10px] tracking-[0.14em] uppercase text-green-800 mt-1">
-              International Ministry
-            </small>
-          </div>
-        </a>
-        <div className="flex gap-8">
-          <a
-            href="#home"
-            className="text-[14px] font-medium text-ink-60 transition-colors duration-200 hover:text-green-800"
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-7 flex items-center justify-between py-[18px]">
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Link
+            to="/"
+            className="flex items-center gap-3 font-montserrat font-extrabold text-[17px] tracking-[-0.01em]"
           >
-            Home
-          </a>
-          <a
-            href="#about"
-            className="text-[14px] font-medium text-ink-60 transition-colors duration-200 hover:text-green-800"
-          >
-            About
-          </a>
-          <a
-            href="#programs"
-            className="text-[14px] font-medium text-ink-60 transition-colors duration-200 hover:text-green-800"
-          >
-            Programs
-          </a>
-          <a
-            href="#events"
-            className="text-[14px] font-medium text-ink-60 transition-colors duration-200 hover:text-green-800"
-          >
-            Events
-          </a>
-          <a
-            href="#media"
-            className="text-[14px] font-medium text-ink-60 transition-colors duration-200 hover:text-green-800"
-          >
-            Media
-          </a>
-          <a
-            href="#contact"
-            className="text-[14px] font-medium text-ink-60 transition-colors duration-200 hover:text-green-800"
-          >
-            Contact
-          </a>
+            <motion.div
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 0.6 }}
+              className="w-10 h-10 bg-green-800 rounded-[10px] grid place-items-center text-gold font-fraunces font-bold text-[20px] relative"
+            >
+              G
+              <div className="absolute inset-1 border border-gold/35 rounded-[7px]"></div>
+            </motion.div>
+            <div className="leading-[1.1]">
+              Godly Teens
+              <small className="block font-medium text-[10px] tracking-[0.14em] uppercase text-green-800 mt-1">
+                International Ministry
+              </small>
+            </div>
+          </Link>
+        </motion.div>
+        <div className="hidden md:flex gap-8">
+          {[
+            { to: "/", label: "Home" },
+            { to: "/about", label: "About" },
+            { to: "/programs", label: "Programs" },
+            { to: "/events", label: "Events" },
+            { to: "/media", label: "Media" },
+            { to: "/membership", label: "Membership" },
+            { to: "/contact", label: "Contact" },
+          ].map((link, index) => (
+            <motion.div
+              key={link.to}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+            >
+              <Link
+                to={link.to}
+                className="text-[14px] font-medium text-ink-60 transition-colors duration-200 hover:text-green-800 relative"
+              >
+                <motion.span
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {link.label}
+                </motion.span>
+                <motion.div
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green-800 origin-left"
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </Link>
+            </motion.div>
+          ))}
         </div>
         <div className="flex items-center gap-2.5">
-          <button className="inline-flex items-center gap-2 px-[22px] py-3 text-[14px] font-semibold rounded-[10px] transition-all duration-220 border border-green-800/25 bg-transparent text-green-800 hover:bg-green-100 hover:border-green-800 cursor-pointer">
-            Sign In
-          </button>
-          <button className="inline-flex items-center gap-2 px-[22px] py-3 text-[14px] font-semibold rounded-[10px] transition-all duration-220 border border-transparent bg-green-800 text-white hover:bg-green-900 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)] cursor-pointer">
-            Join Now
-          </button>
-          <button
-            className="hidden w-10 h-10 border border-line rounded-lg p-2.5"
+          <div className="hidden sm:flex items-center gap-2.5">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 px-[22px] py-3 text-[14px] font-semibold rounded-[10px] transition-all duration-220 border border-transparent bg-green-800 text-white hover:bg-green-900 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)] cursor-pointer"
+              onClick={openJoinModal}
+            >
+              Join Now
+            </motion.button>
+          </div>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden w-10 h-10 border border-line rounded-lg p-2.5 flex flex-col justify-center items-center"
             aria-label="Menu"
           >
-            <span className="block h-0.5 bg-ink mb-1"></span>
-            <span className="block h-0.5 bg-ink mb-1"></span>
-            <span className="block h-0.5 bg-ink"></span>
-          </button>
+            <motion.span
+              animate={{
+                rotate: isMenuOpen ? 45 : 0,
+                y: isMenuOpen ? 2 : 0,
+              }}
+              className="block h-0.5 bg-ink transition-transform duration-200"
+            ></motion.span>
+            <motion.span
+              animate={{ opacity: isMenuOpen ? 0 : 1 }}
+              className="block h-0.5 bg-ink transition-opacity duration-200"
+            ></motion.span>
+            <motion.span
+              animate={{
+                rotate: isMenuOpen ? -45 : 0,
+                y: isMenuOpen ? -2 : 0,
+              }}
+              className="block h-0.5 bg-ink transition-transform duration-200"
+            ></motion.span>
+          </motion.button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden border-t border-line bg-paper/95 backdrop-blur-[14px] overflow-hidden"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {[
+                { to: "/", label: "Home" },
+                { to: "/about", label: "About" },
+                { to: "/programs", label: "Programs" },
+                { to: "/events", label: "Events" },
+                { to: "/media", label: "Media" },
+                { to: "/membership", label: "Membership" },
+                { to: "/contact", label: "Contact" },
+              ].map((link, index) => (
+                <motion.div
+                  key={link.to}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                >
+                  <Link
+                    to={link.to}
+                    className="block text-[14px] font-medium text-ink-60 transition-colors duration-200 hover:text-green-800 py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.7 }}
+                className="pt-4 border-t border-line"
+              >
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full inline-flex items-center justify-center gap-2 px-[22px] py-3 text-[14px] font-semibold rounded-[10px] transition-all duration-220 border border-transparent bg-green-800 text-white hover:bg-green-900 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)] cursor-pointer"
+                  onClick={() => {
+                    openJoinModal();
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Join Now
+                </motion.button>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

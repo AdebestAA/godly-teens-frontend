@@ -23,7 +23,7 @@ const Testimonies: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <article className="border border-line rounded-[16px] p-7 hover:shadow-lg transition-shadow">
+          <article className="bg-white/90 backdrop-blur-sm border-0 rounded-2xl p-7 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
             <div className="text-[64px] font-fraunces text-gold-soft mb-3 leading-none">
               "
             </div>
@@ -31,7 +31,7 @@ const Testimonies: React.FC = () => {
               I came to GTIM broken and unsure. Today I lead the media team in
               my local chapter — and I've never felt more purpose in my life.
             </blockquote>
-            <div className="flex items-center gap-3 pt-6 border-t border-line">
+            <div className="flex items-center gap-3 pt-6 border-t border-gray-200">
               <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-green-600 to-green-800 text-white font-bold text-[12px]">
                 DA
               </div>
@@ -46,7 +46,7 @@ const Testimonies: React.FC = () => {
             </div>
           </article>
 
-          <article className="border border-line rounded-[16px] p-7 hover:shadow-lg transition-shadow">
+          <article className="bg-white/90 backdrop-blur-sm border-0 rounded-2xl p-7 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
             <div className="text-[64px] font-fraunces text-gold-soft mb-3 leading-none">
               "
             </div>
@@ -55,7 +55,7 @@ const Testimonies: React.FC = () => {
               understand the Bible now — and I have friends who challenge me to
               be better.
             </blockquote>
-            <div className="flex items-center gap-3 pt-6 border-t border-line">
+            <div className="flex items-center gap-3 pt-6 border-t border-gray-200">
               <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gold to-gold-dark text-ink font-bold text-[12px]">
                 EO
               </div>
@@ -68,7 +68,7 @@ const Testimonies: React.FC = () => {
             </div>
           </article>
 
-          <article className="border border-line rounded-[16px] p-7 hover:shadow-lg transition-shadow">
+          <article className="bg-white/90 backdrop-blur-sm border-0 rounded-2xl p-7 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
             <div className="text-[64px] font-fraunces text-gold-soft mb-3 leading-none">
               "
             </div>
@@ -76,7 +76,7 @@ const Testimonies: React.FC = () => {
               Our son found a community of teens who love God and love people.
               As parents, that's everything. GTIM has been a gift to our family.
             </blockquote>
-            <div className="flex items-center gap-3 pt-6 border-t border-line">
+            <div className="flex items-center gap-3 pt-6 border-t border-gray-200">
               <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-purple-800 text-white font-bold text-[12px]">
                 MO
               </div>

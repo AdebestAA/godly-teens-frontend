@@ -145,7 +145,7 @@ const Events: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <article className="border border-line rounded-[12px] p-6">
+          <article className="bg-white/90 backdrop-blur-sm border-0 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
             <span className="text-[12px] font-semibold text-green-800 uppercase">
               May 10 · Online
             </span>
@@ -163,7 +163,7 @@ const Events: React.FC = () => {
               Register →
             </a>
           </article>
-          <article className="border border-line rounded-[12px] p-6">
+          <article className="bg-white/90 backdrop-blur-sm border-0 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
             <span className="text-[12px] font-semibold text-green-800 uppercase">
               Jun 02 · Lagos
             </span>
@@ -181,7 +181,7 @@ const Events: React.FC = () => {
               Register →
             </a>
           </article>
-          <article className="border border-line rounded-[12px] p-6">
+          <article className="bg-white/90 backdrop-blur-sm border-0 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
             <span className="text-[12px] font-semibold text-green-800 uppercase">
               Jul 18 · Global
             </span>
