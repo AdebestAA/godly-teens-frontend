@@ -63,10 +63,10 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <strong className="block text-[13px] font-semibold text-ink mb-1">
-                  Call
+                  Phone:
                 </strong>
                 <span className="text-[13px] text-ink-60">
-                  +234 (0) 803 000 0000
+                  +2348080407207, +2349067383924, +2348030672343
                 </span>
               </div>
             </div>
@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
                   Email
                 </strong>
                 <span className="text-[13px] text-ink-60">
-                  hello@godlyteens.org
+                  godlyteens40@gmail.com
                 </span>
               </div>
             </div>
@@ -173,7 +173,7 @@ const Contact: React.FC = () => {
         </div>
 
         <form
-          className="border border-line rounded-[16px] p-8 bg-paper"
+          className="border border-line rounded-[16px] p-8 bg-paper bg-white border-2 border-green-100"
           onSubmit={(e) => e.preventDefault()}
         >
           <h3 className="font-fraunces font-bold text-[24px] mb-2 text-ink">
@@ -191,7 +191,7 @@ const Contact: React.FC = () => {
               <input
                 type="text"
                 placeholder="Grace"
-                className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
+                className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent bg-white border-2 border-green-100"
               />
             </div>
             <div>
@@ -201,7 +201,7 @@ const Contact: React.FC = () => {
               <input
                 type="text"
                 placeholder="Okafor"
-                className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
+                className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent bg-white border-2 border-green-100"
               />
             </div>
           </div>
@@ -212,14 +212,14 @@ const Contact: React.FC = () => {
             <input
               type="email"
               placeholder="grace@example.com"
-              className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
+              className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent bg-white border-2 border-green-100"
             />
           </div>
           <div className="mb-4">
             <label className="block text-[12px] font-semibold uppercase tracking-[0.05em] text-ink-60 mb-2">
               I'm interested in
             </label>
-            <select className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent">
+            <select className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent bg-white border-2 border-green-100">
               <option>Joining a chapter</option>
               <option>Partnering financially</option>
               <option>Volunteering</option>
@@ -233,11 +233,11 @@ const Contact: React.FC = () => {
             </label>
             <textarea
               placeholder="Tell us what's on your heart..."
-              className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent min-h-[120px] resize-none"
+              className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent min-h-[120px] resize-none bg-white border-2 border-green-100"
             ></textarea>
           </div>
           <button
-            className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-[15px] font-semibold text-white bg-green-800 hover:bg-green-900 rounded-[10px] transition-all duration-220 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)]"
+            className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-[15px] font-semibold text-white bg-green-600 hover:bg-green-600 rounded-[10px] transition-all duration-220 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)]"
             type="submit"
           >
             Send message

@@ -53,12 +53,12 @@ const Donate: React.FC = () => {
           </p>
         </div>
 
-        <aside className="bg-paper border border-line rounded-[20px] p-9 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.15)]">
+        <aside className="bg-paper border border-line rounded-[20px] p-9 bg-white border-2 border-green-100">
           <h4 className="font-montserrat text-[18px] font-bold mb-5">
             Make a donation
           </h4>
-          <div className="flex gap-2 bg-white p-1.5 border border-line rounded-[10px] mb-3.5">
-            <button className="flex-1 p-2.5 text-[13px] font-semibold text-ink-60 rounded-md transition-all bg-green-800 text-white">
+          <div className="flex gap-2 bg-white p-1.5 border border-line rounded-[10px] mb-3.5 bg-white border-2 border-green-100">
+            <button className="flex-1 p-2.5 text-[13px] font-semibold text-ink-60 rounded-md transition-all bg-green-500 text-white">
               One-time
             </button>
             <button className="flex-1 p-2.5 text-[13px] font-semibold text-ink-60 rounded-md transition-all">
@@ -69,22 +69,22 @@ const Donate: React.FC = () => {
             </button>
           </div>
           <div className="grid grid-cols-3 gap-2.5 mb-3.5">
-            <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-800">
+            <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-500">
               ₦2,500
             </button>
-            <button className="p-3.5 pb-2 text-center bg-green-800 text-white border-1.5 border-green-800 rounded-[10px] font-bold text-[15px] transition-all">
+            <button className="p-3.5 pb-2 text-center bg-green-500 text-white border-1.5 border-green-500 rounded-[10px] font-bold text-[15px] transition-all">
               ₦10,000
             </button>
-            <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-800">
+            <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-500">
               ₦25,000
             </button>
-            <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-800">
+            <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-500">
               ₦50,000
             </button>
-            <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-800">
+            <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-500">
               ₦100,000
             </button>
-            <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-800">
+            <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-500">
               Other
             </button>
           </div>
@@ -97,7 +97,7 @@ const Donate: React.FC = () => {
               className="flex-1 border-none bg-transparent font-inherit font-semibold text-[15px] outline-none"
             />
           </div>
-          <button className="inline-flex items-center gap-2 px-[22px] py-4 text-[15px] font-semibold rounded-[10px] transition-all duration-220 border border-transparent bg-green-800 text-white hover:bg-green-900 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)] cursor-pointer w-full justify-center">
+          <button className="inline-flex items-center gap-2 px-[22px] py-4 text-[15px] font-semibold rounded-[10px] transition-all duration-220 border border-transparent bg-green-500 text-white hover:bg-green-600 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)] cursor-pointer w-full justify-center">
             Donate Securely
             <svg
               width="14"

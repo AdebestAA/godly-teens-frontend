@@ -6,7 +6,7 @@ const EventsPage: React.FC = () => {
   return (
     <div>
       <Events />
-      <PastEvents />
+      {/* <PastEvents /> */}
     </div>
   );
 };

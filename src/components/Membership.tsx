@@ -84,10 +84,10 @@ const Membership: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="bg-white py-[110px] overflow-hidden"
+      className="bg-white py-27.5 overflow-hidden"
       id="membership"
     >
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-7">
+      <div className="max-w-7xl mx-auto px-4 sm:px-7">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -98,10 +98,10 @@ const Membership: React.FC = () => {
           <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
             Membership
           </span>
-          <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-[-0.025em] text-ink mb-6">
+          <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-tight text-ink mb-6">
             Join Our Global Family
           </h2>
-          <p className="text-[18px] text-ink-60 max-w-[700px] mx-auto leading-relaxed">
+          <p className="text-[18px] text-ink-60 max-w-175 mx-auto leading-relaxed">
             Become part of a worldwide community of young believers committed to
             faith, growth, and making a difference.
           </p>
@@ -120,8 +120,9 @@ const Membership: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-              className="text-center p-6 bg-paper border border-line rounded-[16px] hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="group relative text-center p-6 bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold transition-all duration-500 hover:-translate-y-1 overflow-hidden"
             >
+              <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               <div className="font-fraunces text-[32px] font-semibold text-green-800 mb-2">
                 {stat.number}
               </div>
@@ -150,9 +151,12 @@ const Membership: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 1.0 + index * 0.1 }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="text-center p-6 border border-line rounded-2xl hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group relative p-6 bg-white border-2 border-green-100 rounded-2xl hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden"
               >
-                <div className="text-[48px] mb-4">{benefit.icon}</div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                <div className="relative w-16 h-16 rounded-xl bg-linear-to-br from-emerald-400 to-green-500 text-white flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                  <span className="text-2xl">{benefit.icon}</span>
+                </div>
                 <h4 className="font-fraunces font-bold text-[18px] text-ink mb-3">
                   {benefit.title}
                 </h4>
@@ -222,9 +226,10 @@ const Membership: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 1.8 }}
               whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-              className="border-2 border-green-200 bg-green-50 rounded-[20px] p-8 text-center hover:shadow-xl transition-all duration-300"
+              className="group relative border-2 border-green-200 bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
-              <div className="w-20 h-20 rounded-full bg-green-800 text-white grid place-items-center mx-auto mb-6 text-[32px]">
+              <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800"></div>
+              <div className="relative w-20 h-20 rounded-full bg-linear-to-br from-green-800 to-emerald-600 text-white grid place-items-center mx-auto mb-6 text-[32px] shadow-lg">
                 ✨
               </div>
               <h4 className="font-fraunces font-bold text-[24px] text-ink mb-4">
@@ -268,12 +273,19 @@ const Membership: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.0 }}
-          className="bg-paper border border-line rounded-[20px] p-8"
+          className="relative bg-white border-2 border-green-100 rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-500"
         >
-          <h3 className="font-montserrat font-bold text-[24px] text-ink text-center mb-8">
-            Frequently Asked Questions
-          </h3>
-          <Accordion items={faqItems} />
+          <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 rounded-t-2xl"></div>
+          <div className="relative">
+            <h3 className="font-montserrat font-bold text-[24px] text-ink text-center mb-3">
+              Frequently Asked Questions
+            </h3>
+            <p className="max-w-2xl mx-auto text-center text-ink-60 mb-8">
+              Answers to common membership questions, designed to help you join
+              and thrive with GTIM.
+            </p>
+            <Accordion items={faqItems} />
+          </div>
         </motion.div>
       </div>
     </motion.section>

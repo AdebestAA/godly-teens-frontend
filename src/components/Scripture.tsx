@@ -2,7 +2,7 @@ import React from "react";
 
 const Scripture: React.FC = () => {
   return (
-    <section className="bg-green-900 py-[80px] overflow-hidden">
+    <section className="bg-green-600 py-[80px] overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-7 text-center">
         <blockquote className="font-montserrat font-bold text-[clamp(24px,3vw,48px)] text-white leading-[1.15] tracking-[-0.01em] mb-6 max-w-[900px] mx-auto">
           Don't let anyone look down on you because you are young, but{" "}

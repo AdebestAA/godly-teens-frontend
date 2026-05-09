@@ -2,7 +2,7 @@ import React from "react";
 
 const ScriptureRibbon: React.FC = () => {
   return (
-    <div className="bg-green-900 text-white py-[18px] overflow-hidden border-t border-gold/20 border-b border-gold/20">
+    <div className="bg-white border-2 border-green-100 text-green-900 py-[18px] overflow-hidden border-t border-gold/20 border-b border-gold/20">
       <div className="flex gap-[60px] whitespace-nowrap animate-slide font-fraunces text-[18px] italic font-normal">
         <span className="inline-flex items-center gap-[60px]">
           "Let no one despise your youth, but be an example"{" "}
