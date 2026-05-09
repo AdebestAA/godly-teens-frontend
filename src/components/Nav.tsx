@@ -18,7 +18,7 @@ const Nav: React.FC = () => {
             <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
-              className="w-10 h-10 bg-green-800 rounded-[10px] grid place-items-center text-gold font-fraunces font-bold text-[20px] relative"
+              className="w-10 h-10 bg-green-600 rounded-[10px] grid place-items-center text-gold font-fraunces font-bold text-[20px] relative"
             >
               G
               <div className="absolute inset-1 border border-gold/35 rounded-[7px]"></div>
@@ -58,7 +58,7 @@ const Nav: React.FC = () => {
                   {link.label}
                 </motion.span>
                 <motion.div
-                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green-800 origin-left"
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green-600 origin-left"
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
@@ -72,7 +72,7 @@ const Nav: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-[22px] py-3 text-[14px] font-semibold rounded-[10px] transition-all duration-220 border border-transparent bg-green-800 text-white hover:bg-green-900 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)] cursor-pointer"
+              className="inline-flex items-center gap-2 px-[22px] py-3 text-[14px] font-semibold rounded-[10px] transition-all duration-220 border border-transparent bg-green-600 text-white hover:bg-green-900 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)] cursor-pointer"
               onClick={openJoinModal}
             >
               Join Now

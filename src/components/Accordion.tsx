@@ -32,17 +32,17 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="border border-line rounded-[12px] overflow-hidden"
+          className="group border-2 border-green-100 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-all duration-300"
         >
           <button
             onClick={() => toggleItem(item.id)}
-            className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-paper/50 transition-colors duration-200"
+            className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-green-50 transition-colors duration-200"
           >
             <h4 className="font-semibold text-ink pr-4">{item.question}</h4>
             <motion.div
               animate={{ rotate: openItems.has(item.id) ? 180 : 0 }}
               transition={{ duration: 0.2 }}
-              className="flex-shrink-0"
+              className="shrink-0"
             >
               <svg
                 width="20"
@@ -66,7 +66,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <div className="px-6 pb-4">
+                <div className="px-6 pb-4 bg-green-50/60">
                   <p className="text-ink-60 text-[14px] leading-relaxed">
                     {item.answer}
                   </p>
