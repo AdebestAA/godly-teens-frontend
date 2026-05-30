@@ -7,7 +7,7 @@ import Events from "../components/Events";
 import Scripture from "../components/Scripture";
 import Media from "../components/Media";
 import Testimonies from "../components/Testimonies";
-import Donate from "../components/Donate";
+
 import Involved from "../components/Involved";
 import Contact from "../components/Contact";
 
