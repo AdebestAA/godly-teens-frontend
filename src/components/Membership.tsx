@@ -1,44 +1,54 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Users, BookOpen, Calendar, MessageCircle, Target, Sparkles } from "lucide-react";
 import { useModalStore } from "../stores/modalStore";
 import Accordion from "./Accordion";
+
+const iconMap: Record<string, React.ReactNode> = {
+  users: <Users className="w-6 h-6 text-white" />,
+  book: <BookOpen className="w-6 h-6 text-white" />,
+  calendar: <Calendar className="w-6 h-6 text-white" />,
+  message: <MessageCircle className="w-6 h-6 text-white" />,
+  target: <Target className="w-6 h-6 text-white" />,
+  sparkles: <Sparkles className="w-6 h-6 text-white" />,
+};
 
 const Membership: React.FC = () => {
   const openJoinModal = useModalStore((state) => state.openJoinModal);
 
   const membershipBenefits = [
     {
-      icon: "👥",
+      icon: "users",
       title: "Community Access",
       description:
         "Connect with like-minded teens and young adults from around the world.",
     },
     {
-      icon: "📚",
+      icon: "book",
       title: "Resource Library",
       description:
         "Access exclusive sermons, study guides, and spiritual growth materials.",
     },
     {
-      icon: "📅",
+      icon: "calendar",
       title: "Event Priority",
       description:
         "Early registration and special access to all GTIM events and programs.",
     },
     {
-      icon: "💬",
+      icon: "message",
       title: "Mentorship Program",
       description:
         "Connect with spiritual mentors and leaders for personal guidance.",
     },
     {
-      icon: "🎯",
+      icon: "target",
       title: "Personal Dashboard",
       description:
         "Track your spiritual journey, event registrations, and community involvement.",
     },
     {
-      icon: "🌟",
+      icon: "sparkles",
       title: "Leadership Opportunities",
       description:
         "Participate in leadership development and serve in various ministry roles.",
@@ -155,7 +165,7 @@ const Membership: React.FC = () => {
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                 <div className="relative w-16 h-16 rounded-xl bg-linear-to-br from-emerald-400 to-green-500 text-white flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
-                  <span className="text-2xl">{benefit.icon}</span>
+                  {iconMap[benefit.icon]}
                 </div>
                 <h4 className="font-fraunces font-bold text-[18px] text-ink mb-3">
                   {benefit.title}
@@ -229,8 +239,8 @@ const Membership: React.FC = () => {
               className="group relative border-2 border-green-200 bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800"></div>
-              <div className="relative w-20 h-20 rounded-full bg-linear-to-br from-green-800 to-emerald-600 text-white grid place-items-center mx-auto mb-6 text-[32px] shadow-lg">
-                ✨
+              <div className="relative w-20 h-20 rounded-full bg-linear-to-br from-green-800 to-emerald-600 text-white grid place-items-center mx-auto mb-6 shadow-lg">
+                <Sparkles className="w-8 h-8" />
               </div>
               <h4 className="font-fraunces font-bold text-[24px] text-ink mb-4">
                 Free Membership

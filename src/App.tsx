@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import JoinModal from "./components/JoinModal";
@@ -34,6 +35,7 @@ function App() {
         </Routes>
         <Footer />
         <JoinModal />
+        <Toaster position="top-center" toastOptions={{ duration: 4000 }} />
       </div>
     </Router>
   );

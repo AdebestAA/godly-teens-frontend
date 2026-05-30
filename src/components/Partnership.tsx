@@ -1,4 +1,14 @@
 import React from "react";
+import { Building2, Landmark, Monitor, HeartPulse, BookOpen, Leaf } from "lucide-react";
+
+const partnerIconMap: Record<string, React.ReactNode> = {
+  government: <Building2 className="w-6 h-6" />,
+  financial: <Landmark className="w-6 h-6" />,
+  technology: <Monitor className="w-6 h-6" />,
+  healthcare: <HeartPulse className="w-6 h-6" />,
+  education: <BookOpen className="w-6 h-6" />,
+  environment: <Leaf className="w-6 h-6" />,
+};
 
 const Partnership: React.FC = () => {
   const partnershipOptions = [
@@ -53,12 +63,12 @@ const Partnership: React.FC = () => {
   ];
 
   const currentPartners = [
-    { name: "Nigerian Youth Foundation", logo: "🏛️", type: "Government" },
-    { name: "Kingdom Bank", logo: "🏦", type: "Financial" },
-    { name: "Tech4Good Nigeria", logo: "💻", type: "Technology" },
-    { name: "Hope Medical Center", logo: "🏥", type: "Healthcare" },
-    { name: "EduCare International", logo: "📚", type: "Education" },
-    { name: "Green Future Initiative", logo: "🌱", type: "Environment" },
+    { name: "Nigerian Youth Foundation", type: "government" },
+    { name: "Kingdom Bank", type: "financial" },
+    { name: "Tech4Good Nigeria", type: "technology" },
+    { name: "Hope Medical Center", type: "healthcare" },
+    { name: "EduCare International", type: "education" },
+    { name: "Green Future Initiative", type: "environment" },
   ];
 
   return (
@@ -204,7 +214,7 @@ const Partnership: React.FC = () => {
                 key={index}
                 className="text-center p-4 border border-line rounded-[12px] hover:border-green-200 transition-colors"
               >
-                <div className="text-[32px] mb-2">{partner.logo}</div>
+                <div className="text-[32px] mb-2">{partnerIconMap[partner.type]}</div>
                 <h4 className="font-semibold text-[14px] text-ink mb-1">
                   {partner.name}
                 </h4>
