@@ -22,7 +22,7 @@ const Home: React.FC = () => {
       <Scripture />
       <Media />
       <Testimonies />
-      <Donate />
+      {/* <Donate /> */}
       <Involved />
       <Contact />
     </div>
