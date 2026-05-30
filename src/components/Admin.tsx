@@ -1,4 +1,12 @@
 import React, { useState } from "react";
+import { Users, Calendar, DollarSign, FileText } from "lucide-react";
+
+const adminIconMap: Record<string, React.ReactNode> = {
+  users: <Users className="w-6 h-6" />,
+  calendar: <Calendar className="w-6 h-6" />,
+  money: <DollarSign className="w-6 h-6" />,
+  file: <FileText className="w-6 h-6" />,
+};
 
 const Admin: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -70,10 +78,10 @@ const Admin: React.FC = () => {
   }
 
   const stats = [
-    { label: "Total Users", value: "12,847", change: "+12%", icon: "👥" },
-    { label: "Active Events", value: "24", change: "+3", icon: "📅" },
-    { label: "Total Donations", value: "₦8.2M", change: "+18%", icon: "💰" },
-    { label: "Content Items", value: "456", change: "+23", icon: "📄" },
+    { label: "Total Users", value: "12,847", change: "+12%", icon: "users" },
+    { label: "Active Events", value: "24", change: "+3", icon: "calendar" },
+    { label: "Total Donations", value: "₦8.2M", change: "+18%", icon: "money" },
+    { label: "Content Items", value: "456", change: "+23", icon: "file" },
   ];
 
   const recentActivities = [
@@ -109,7 +117,7 @@ const Admin: React.FC = () => {
               className="bg-white border border-line rounded-[16px] p-6"
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="text-[24px]">{stat.icon}</span>
+                {adminIconMap[stat.icon]}
                 <span className="text-green-600 text-[12px] font-semibold">
                   {stat.change}
                 </span>

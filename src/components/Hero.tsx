@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Globe, Circle } from "lucide-react";
 import { useModalStore } from "../stores/modalStore";
 
 const Hero: React.FC = () => {
@@ -68,7 +69,8 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="inline-flex items-center gap-2.5 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-[12px] font-semibold tracking-[0.06em] uppercase mb-6"
             >
-              🌍 A Global Youth Movement — Est. Ibadan, Nigeria
+              <Globe className="w-4 h-4 inline" /> A Global Youth Movement —
+              Est. Ibadan, Nigeria
             </motion.span>
 
             <motion.h1
@@ -144,7 +146,7 @@ const Hero: React.FC = () => {
             </motion.div>
 
             {/* Stats */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.5 }}
@@ -176,7 +178,7 @@ const Hero: React.FC = () => {
                   Resources
                 </div>
               </motion.div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Right side - Featured content card */}
@@ -207,7 +209,8 @@ const Hero: React.FC = () => {
                   transition={{ delay: 1.2 }}
                   className="inline-block px-3 py-1 bg-red-500/20 text-red-300 text-xs font-bold rounded-full mb-4"
                 >
-                  🔴 LIVE NOW
+                  <Circle className="w-3 h-3 fill-red-500 text-red-500 inline" />{" "}
+                  LIVE NOW
                 </motion.span>
                 <h3 className="font-fraunces font-bold text-2xl text-white mb-2">
                   Teen Worship Night

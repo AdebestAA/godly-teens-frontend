@@ -13,9 +13,10 @@ const Nav: React.FC = () => {
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             to="/"
-            className="flex items-center gap-3 font-montserrat font-extrabold text-[17px] tracking-[-0.01em]"
+            className=" gap-3 font-montserrat font-extrabold text-[17px] tracking-[-0.01em]"
           >
-            <motion.div
+            <img src="/logo-two.png" alt="logo" className="w-15 h-15" />
+            {/* <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
               className="w-10 h-10 bg-green-600 rounded-[10px] grid place-items-center text-gold font-fraunces font-bold text-[20px] relative"
@@ -28,7 +29,7 @@ const Nav: React.FC = () => {
               <small className="block font-medium text-[10px] tracking-[0.14em] uppercase text-green-800 mt-1">
                 International Ministry
               </small>
-            </div>
+            </div> */}
           </Link>
         </motion.div>
         <div className="hidden md:flex gap-8">

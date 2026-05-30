@@ -1,4 +1,5 @@
 import React from "react";
+import { Users } from "lucide-react";
 
 const PastEvents: React.FC = () => {
   const pastEvents = [
@@ -111,8 +112,8 @@ const PastEvents: React.FC = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-4 pb-4 border-b border-line">
-                  <span className="text-[13px] font-medium text-ink-60">
-                    👥 {event.attendees.toLocaleString()} attendees
+                  <span className="text-[13px] font-medium text-ink-60 flex items-center gap-1">
+                    <Users className="w-4 h-4" /> {event.attendees.toLocaleString()} attendees
                   </span>
                 </div>
                 <p className="text-[14px] text-ink-60 mb-4 leading-relaxed">
