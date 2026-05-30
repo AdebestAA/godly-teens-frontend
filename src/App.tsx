@@ -29,7 +29,7 @@ function App() {
           <Route path="/media" element={<MediaPage />} />
           <Route path="/membership" element={<MembershipPage />} />
           <Route path="/partnership" element={<PartnershipPage />} />
-          <Route path="/donation" element={<DonationPage />} />
+          {/* <Route path="/donation" element={<DonationPage />} /> */}
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/admin" element={<AdminPage />} />
         </Routes>
