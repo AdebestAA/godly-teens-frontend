@@ -62,12 +62,12 @@ const Membership: React.FC = () => {
     },
   ];
 
-  const membershipStats = [
-    { number: "12,000+", label: "Active Members" },
-    { number: "28", label: "Countries" },
-    { number: "400+", label: "Resources Available" },
-    { number: "50+", label: "Local Chapters" },
-  ];
+  // const membershipStats = [
+  //   { number: "12,000+", label: "Active Members" },
+  //   { number: "28", label: "Countries" },
+  //   { number: "400+", label: "Resources Available" },
+  //   { number: "50+", label: "Local Chapters" },
+  // ];
 
   const faqItems = [
     {

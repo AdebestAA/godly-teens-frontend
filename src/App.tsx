@@ -11,7 +11,7 @@ import EventDetailsPage from "./pages/EventDetailsPage";
 import MediaPage from "./pages/MediaPage";
 import MembershipPage from "./pages/MembershipPage";
 import PartnershipPage from "./pages/PartnershipPage";
-import DonationPage from "./pages/DonationPage";
+
 import ContactPage from "./pages/ContactPage";
 import AdminPage from "./pages/AdminPage";
 
