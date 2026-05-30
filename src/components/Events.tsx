@@ -46,19 +46,19 @@ const CardSlider: React.FC<{ photos: string[]; onClick: () => void }> = ({
 };
 
 const YMS_IMAGES_2017 = [
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780154127/photo-three_fqr1k3.png",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780154131/photo-four_fpurci.png",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780154194/photo-two_zouyz4.png",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780154128/photo-one_bkptmc.png",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780154127/photo-three_fqr1k3.png",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780154131/photo-four_fpurci.png",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780154194/photo-two_zouyz4.png",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780154128/photo-one_bkptmc.png",
 ];
 
 const YMS_IMAGES_2022 = [
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780155928/photo-two-2022_puhj2p.jpg",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780155934/photo-three-2022_cw9jb1.jpg",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780155925/photo-four-2022_do9btl.jpg",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780155927/photo-one-2022_tlolou.jpg",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780155910/photo-five-2022_kclhlc.jpg",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780155913/photo-six-2022_agbznf.jpg",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155928/photo-two-2022_puhj2p.jpg",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155934/photo-three-2022_cw9jb1.jpg",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155925/photo-four-2022_do9btl.jpg",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155927/photo-one-2022_tlolou.jpg",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155910/photo-five-2022_kclhlc.jpg",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155913/photo-six-2022_agbznf.jpg",
 ];
 
 const ymsData = [

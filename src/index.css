@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  font-size: 15px;
+}
+
 @keyframes slide {
   0% {
     transform: translateX(0);

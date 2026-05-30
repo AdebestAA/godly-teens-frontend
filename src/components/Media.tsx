@@ -2,11 +2,11 @@ import React from "react";
 import ScrollReveal from "./ScrollReveal";
 
 const MEDIA_IMAGES = [
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780155928/photo-two-2022_puhj2p.jpg",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780155934/photo-three-2022_cw9jb1.jpg",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780155925/photo-four-2022_do9btl.jpg",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780155927/photo-one-2022_tlolou.jpg",
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/v1780155910/photo-five-2022_kclhlc.jpg",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155928/photo-two-2022_puhj2p.jpg",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155934/photo-three-2022_cw9jb1.jpg",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155925/photo-four-2022_do9btl.jpg",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155927/photo-one-2022_tlolou.jpg",
+  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155910/photo-five-2022_kclhlc.jpg",
 ];
 
 const Media: React.FC = () => {
