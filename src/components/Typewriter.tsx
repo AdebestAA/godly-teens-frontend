@@ -3,15 +3,10 @@ import { useInView } from "framer-motion";
 
 interface TypewriterProps {
   text: string;
-  /** Characters per second (default ~60) */
   speed?: number;
-  /** Delay before starting, in seconds */
   startDelay?: number;
-  /** Whether to show a blinking cursor */
   showCursor?: boolean;
   className?: string;
-  /** HTML tag to render */
-  as?: keyof JSX.IntrinsicElements;
 }
 
 const Typewriter: React.FC<TypewriterProps> = ({
@@ -20,11 +15,10 @@ const Typewriter: React.FC<TypewriterProps> = ({
   startDelay = 0.3,
   showCursor = true,
   className,
-  as: Tag = "p",
 }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [started, setStarted] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLParagraphElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px", amount: 0.3 });
 
   useEffect(() => {
@@ -52,13 +46,13 @@ const Typewriter: React.FC<TypewriterProps> = ({
     return () => clearTimeout(timeout);
   }, [started, text, speed, startDelay]);
 
-  return React.createElement(
-    Tag,
-    { ref, className },
-    displayedText,
-    showCursor && started && displayedText.length < text.length ? (
-      <span className="inline-block w-[2px] h-[1em] bg-green-600 ml-0.5 align-middle animate-pulse" />
-    ) : null
+  return (
+    <p ref={ref} className={className}>
+      {displayedText}
+      {showCursor && started && displayedText.length < text.length && (
+        <span className="inline-block w-[2px] h-[1em] bg-green-600 ml-0.5 align-middle animate-pulse" />
+      )}
+    </p>
   );
 };
 
