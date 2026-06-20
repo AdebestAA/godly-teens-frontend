@@ -9,15 +9,22 @@ html {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-25%);
   }
 }
 
 .animate-slide {
-  animation: slide 25s linear infinite;
+  animation: slide 12s linear infinite;
 }
 
-/* Optional: Pause animation on hover for better UX */
 .animate-slide:hover {
   animation-play-state: paused;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

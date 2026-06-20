@@ -35,18 +35,17 @@ const Media: React.FC = () => {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal direction="up" staggerDelay={0.12} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {/* Large featured card */}
-          <div className="md:col-span-2 lg:col-span-3 rounded-[16px] overflow-hidden relative h-[380px]">
-            <img src={MEDIA_IMAGES[0]} alt="Featured" className="w-full h-full object-cover" />
+        <ScrollReveal direction="up">
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 scrollbar-hide">
+            {MEDIA_IMAGES.map((src, i) => (
+              <div
+                key={i}
+                className="snap-center shrink-0 w-[80vw] md:w-[400px] rounded-[16px] overflow-hidden relative h-[280px]"
+              >
+                <img src={src} alt={`Media ${i + 1}`} className="w-full h-full object-cover" />
+              </div>
+            ))}
           </div>
-
-          {/* Small cards */}
-          {MEDIA_IMAGES.slice(1, 5).map((src, i) => (
-            <div key={i} className="rounded-[16px] overflow-hidden relative h-[250px]">
-              <img src={src} alt={`Media ${i + 2}`} className="w-full h-full object-cover" />
-            </div>
-          ))}
         </ScrollReveal>
       </div>
     </section>

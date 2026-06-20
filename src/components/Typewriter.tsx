@@ -17,18 +17,13 @@ const Typewriter: React.FC<TypewriterProps> = ({
   className,
 }) => {
   const [displayedText, setDisplayedText] = useState("");
-  const [started, setStarted] = useState(false);
   const ref = useRef<HTMLParagraphElement>(null);
+  const hasStarted = useRef(false);
   const isInView = useInView(ref, { once: true, margin: "-100px", amount: 0.3 });
 
   useEffect(() => {
-    if (isInView && !started) {
-      setStarted(true);
-    }
-  }, [isInView, started]);
-
-  useEffect(() => {
-    if (!started) return;
+    if (!isInView || hasStarted.current) return;
+    hasStarted.current = true;
 
     let i = 0;
     const delay = 1000 / speed;
@@ -44,12 +39,12 @@ const Typewriter: React.FC<TypewriterProps> = ({
     }, startDelay * 1000);
 
     return () => clearTimeout(timeout);
-  }, [started, text, speed, startDelay]);
+  }, [isInView, text, speed, startDelay]);
 
   return (
     <p ref={ref} className={className}>
       {displayedText}
-      {showCursor && started && displayedText.length < text.length && (
+      {showCursor && displayedText && displayedText.length < text.length && (
         <span className="inline-block w-[2px] h-[1em] bg-green-600 ml-0.5 align-middle animate-pulse" />
       )}
     </p>

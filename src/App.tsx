@@ -11,7 +11,7 @@ import EventDetailsPage from "./pages/EventDetailsPage";
 import MediaPage from "./pages/MediaPage";
 import MembershipPage from "./pages/MembershipPage";
 import PartnershipPage from "./pages/PartnershipPage";
-import DonationPage from "./pages/DonationPage";
+
 import ContactPage from "./pages/ContactPage";
 import AdminPage from "./pages/AdminPage";
 
@@ -29,7 +29,7 @@ function App() {
           <Route path="/media" element={<MediaPage />} />
           <Route path="/membership" element={<MembershipPage />} />
           <Route path="/partnership" element={<PartnershipPage />} />
-          <Route path="/donation" element={<DonationPage />} />
+          {/* <Route path="/donation" element={<DonationPage />} /> */}
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/admin" element={<AdminPage />} />
         </Routes>

@@ -16,9 +16,9 @@ const Home: React.FC = () => {
     <div>
       <Hero />
       <ScriptureRibbon />
-      <About />
-      <Programs />
-      <Events />
+      <About teaser />
+      <Programs teaser />
+      <Events teaser />
       <Scripture />
       <Media />
       <Testimonies />

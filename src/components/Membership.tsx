@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Users, BookOpen, Calendar, MessageCircle, Target, Sparkles } from "lucide-react";
+import {
+  Users,
+  BookOpen,
+  Calendar,
+  MessageCircle,
+  Target,
+  Sparkles,
+} from "lucide-react";
 import { useModalStore } from "../stores/modalStore";
 import Accordion from "./Accordion";
 
@@ -55,12 +62,12 @@ const Membership: React.FC = () => {
     },
   ];
 
-  const membershipStats = [
-    { number: "12,000+", label: "Active Members" },
-    { number: "28", label: "Countries" },
-    { number: "400+", label: "Resources Available" },
-    { number: "50+", label: "Local Chapters" },
-  ];
+  // const membershipStats = [
+  //   { number: "12,000+", label: "Active Members" },
+  //   { number: "28", label: "Countries" },
+  //   { number: "400+", label: "Resources Available" },
+  //   { number: "50+", label: "Local Chapters" },
+  // ];
 
   const faqItems = [
     {
@@ -118,13 +125,13 @@ const Membership: React.FC = () => {
         </motion.div>
 
         {/* Membership Stats */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-        >
-          {membershipStats.map((stat, index) => (
+        > */}
+        {/* {membershipStats.map((stat, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -140,8 +147,8 @@ const Membership: React.FC = () => {
                 {stat.label}
               </div>
             </motion.div>
-          ))}
-        </motion.div>
+          ))} */}
+        {/* </motion.div> */}
 
         {/* Membership Benefits */}
         <motion.div
