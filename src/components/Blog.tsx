@@ -245,7 +245,7 @@ const Blog: React.FC = () => {
 
         {/* Load More */}
         <div className="text-center mt-12">
-          <button className="inline-flex items-center gap-2 px-8 py-4 text-[15px] font-semibold rounded-[10px] transition-all duration-220 border border-green-800/25 bg-transparent text-green-800 hover:bg-green-100 hover:border-green-800 cursor-pointer">
+          {/* <button className="inline-flex items-center gap-2 px-8 py-4 text-[15px] font-semibold rounded-[10px] transition-all duration-220 border border-green-800/25 bg-transparent text-green-800 hover:bg-green-100 hover:border-green-800 cursor-pointer">
             Load More Articles
             <svg
               width="16"
@@ -258,7 +258,7 @@ const Blog: React.FC = () => {
               <path d="M7 13l3 3 7-7" />
               <path d="M12 2v10" />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

@@ -28,3 +28,15 @@ html {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+@keyframes mediaScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-media-scroll {
+  animation: mediaScroll 30s linear infinite;
+}
+.animate-media-scroll:hover {
+  animation-play-state: paused;
+}

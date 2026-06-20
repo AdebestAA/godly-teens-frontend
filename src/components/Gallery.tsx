@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 
 const Gallery: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const categories = [
     "All",
@@ -107,6 +108,20 @@ const Gallery: React.FC = () => {
       ? galleryImages
       : galleryImages.filter((img) => img.category === selectedCategory);
 
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el || filteredImages.length === 0) return;
+    const scrollStep = 1;
+    const interval = setInterval(() => {
+      if (el.matches(":hover")) return;
+      el.scrollLeft += scrollStep;
+      if (el.scrollLeft >= el.scrollWidth / 2) {
+        el.scrollLeft = 0;
+      }
+    }, 40);
+    return () => clearInterval(interval);
+  }, [filteredImages]);
+
   return (
     <section className="bg-white py-[110px] overflow-hidden" id="gallery">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-7">
@@ -136,47 +151,33 @@ const Gallery: React.FC = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {filteredImages.map((image, i) => (
-            <motion.div
-              key={image.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="group relative aspect-square overflow-hidden rounded-[12px] cursor-pointer"
-              onClick={() => setSelectedImage(image.src)}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="2"
-                    className="drop-shadow-lg"
-                  >
-                    <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 21H6a2 2 0 01-2-2V5a2 2 0 012-2h4M9 9l3 3 7-7" />
-                  </svg>
+        <div className="relative group/gal">
+          <div ref={scrollRef} className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+            {[...filteredImages, ...filteredImages].map((image, i) => (
+              <motion.div
+                key={`${image.id}-${i}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: (i % filteredImages.length) * 0.06 }}
+                className="snap-center shrink-0 w-[75vw] sm:w-[320px] aspect-square rounded-[12px] overflow-hidden cursor-pointer relative group"
+                onClick={() => setSelectedImage(image.src)}
+              >
+                <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" className="drop-shadow-lg">
+                      <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 21H6a2 2 0 01-2-2V5a2 2 0 012-2h4M9 9l3 3 7-7" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3">
-                <h3 className="text-white text-[12px] font-semibold truncate">
-                  {image.title}
-                </h3>
-                <span className="text-green-300 text-[10px] uppercase tracking-wide">
-                  {image.category}
-                </span>
-              </div>
-            </motion.div>
-          ))}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3">
+                  <h3 className="text-white text-[12px] font-semibold truncate">{image.title}</h3>
+                  <span className="text-green-300 text-[10px] uppercase tracking-wide">{image.category}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {selectedImage && (
