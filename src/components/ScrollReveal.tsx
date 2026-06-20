@@ -12,11 +12,11 @@ interface ScrollRevealProps {
 }
 
 const dirMap: Record<string, { x: number; y: number }> = {
-  up:    { x: 0, y: 30 },
-  down:  { x: 0, y: -30 },
-  left:  { x: 30, y: 0 },
+  up: { x: 0, y: 30 },
+  down: { x: 0, y: -30 },
+  left: { x: 30, y: 0 },
   right: { x: -30, y: 0 },
-  none:  { x: 0, y: 0 },
+  none: { x: 0, y: 0 },
 };
 
 const ScrollReveal: React.FC<ScrollRevealProps> = ({
@@ -26,13 +26,13 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   distance = 30,
   delay = 0,
   staggerDelay,
-  duration = 0.6,
+  duration = 0.4,
 }) => {
   const { x, y } = dirMap[direction];
   const dx = x ? (x > 0 ? distance : -distance) : 0;
   const dy = y ? (y > 0 ? distance : -distance) : 0;
 
-  const viewport = { once: true };
+  const viewport = { once: true, amount: 0 };
 
   if (staggerDelay && staggerDelay > 0) {
     return (
@@ -43,7 +43,9 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
         viewport={viewport}
         variants={{
           hidden: {},
-          visible: { transition: { staggerChildren: staggerDelay, delayChildren: delay } },
+          visible: {
+            transition: { staggerChildren: staggerDelay, delayChildren: delay },
+          },
         }}
       >
         {React.Children.map(children, (child, i) =>
@@ -52,14 +54,19 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
               key={i}
               variants={{
                 hidden: { opacity: 0, x: dx, y: dy },
-                visible: { opacity: 1, x: 0, y: 0, transition: { duration, ease: "easeOut" } },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  y: 0,
+                  transition: { duration, ease: "easeOut" },
+                },
               }}
             >
               {child}
             </motion.div>
           ) : (
             child
-          )
+          ),
         )}
       </motion.div>
     );

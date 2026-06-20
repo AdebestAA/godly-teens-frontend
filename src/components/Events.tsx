@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import { useYmsModalStore } from "../stores/ymsModalStore";
 
@@ -150,8 +151,27 @@ const ymsData = [
   },
 ];
 
-const Events: React.FC = () => {
+const Events: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
   const ymsModal = useYmsModalStore();
+
+  if (teaser) {
+    return (
+      <section className="bg-white py-20 overflow-hidden" id="events">
+        <div className="max-w-3xl mx-auto px-7 text-center">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">Flagship Event</span>
+          <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-tight mb-6">
+            Youth Ministers' Summit <em className="font-fraunces italic font-medium text-gold-dark">YMS</em>
+          </h2>
+          <p className="text-lg text-ink-60 max-w-2xl mx-auto mb-8">
+            The Youth Ministers' Summit is a flagship annual gathering bringing together teenagers and young people for powerful encounters through worship, teachings, mentorship, and life-transforming experiences.
+          </p>
+          <Link to="/events" className="inline-flex items-center gap-2 px-8 py-4 text-[15px] font-semibold rounded-xl bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl transition-all">
+            Learn More <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="bg-white py-27.5 overflow-hidden" id="events">

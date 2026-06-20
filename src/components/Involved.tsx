@@ -1,66 +1,48 @@
 import React from "react";
+import { HandHeart, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
+import { useModalStore } from "../stores/modalStore";
 
 const Involved: React.FC = () => {
+  const openJoinModal = useModalStore((s) => s.openJoinModal);
+
   return (
-    <section className="bg-green-900 py-[110px] overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-7">
+    <section className="bg-green-900 py-[80px] overflow-hidden">
+      <div className="max-w-[1280px] mx-auto px-7 text-center">
         <ScrollReveal direction="up">
-          <div className="mb-16">
-            <div>
-              <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-gold mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
-                Get involved
-              </span>
-              <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-[-0.025em] text-white max-w-[550px]">
-                Four ways to{" "}
-                <em className="font-fraunces italic font-medium text-gold-soft">
-                  step in.
-                </em>
-              </h2>
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-gold mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+            Get Involved
+          </span>
+          <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-[-0.025em] text-white mb-6">
+            Ready to{" "}
+            <em className="font-fraunces italic font-medium text-gold-soft">step in?</em>
+          </h2>
+          <p className="text-green-100 max-w-xl mx-auto mb-8 leading-relaxed">
+            Become a member, volunteer, partner financially, or plant a chapter — there's a place for you in this movement.
+          </p>
+
+          <div className="flex items-center justify-center gap-8 mb-8">
+            <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center">
+              <HandHeart className="w-8 h-8 text-gold" />
             </div>
           </div>
-        </ScrollReveal>
 
-        <ScrollReveal
-          direction="up"
-         
-          staggerDelay={0.15}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          <div className="bg-white/5 border border-white/10 rounded-[16px] p-8 hover:bg-white/10 transition-colors">
-            <div className="text-[48px] font-fraunces font-bold text-gold mb-4">01 /</div>
-            <h4 className="font-fraunces font-bold text-[20px] text-white mb-3">Become a Member</h4>
-            <p className="text-[14px] text-green-100 leading-relaxed mb-6">
-              Create a free account to track events, save sermons and connect to a local chapter.
-            </p>
-            <a href="#" className="inline-flex items-center gap-1 text-[13px] font-semibold text-gold hover:text-gold-soft transition-colors">Sign up →</a>
-          </div>
-
-          <div className="bg-white/5 border border-white/10 rounded-[16px] p-8 hover:bg-white/10 transition-colors">
-            <div className="text-[48px] font-fraunces font-bold text-gold mb-4">02 /</div>
-            <h4 className="font-fraunces font-bold text-[20px] text-white mb-3">Volunteer</h4>
-            <p className="text-[14px] text-green-100 leading-relaxed mb-6">
-              Join a serve team — media, hospitality, prayer, logistics. There's a seat at the table for you.
-            </p>
-            <a href="#" className="inline-flex items-center gap-1 text-[13px] font-semibold text-gold hover:text-gold-soft transition-colors">Apply →</a>
-          </div>
-
-          <div className="bg-white/5 border border-white/10 rounded-[16px] p-8 hover:bg-white/10 transition-colors">
-            <div className="text-[48px] font-fraunces font-bold text-gold mb-4">03 /</div>
-            <h4 className="font-fraunces font-bold text-[20px] text-white mb-3">Partner Financially</h4>
-            <p className="text-[14px] text-green-100 leading-relaxed mb-6">
-              Become a monthly partner and help sustain the mission year-round.
-            </p>
-            <a href="#" className="inline-flex items-center gap-1 text-[13px] font-semibold text-gold hover:text-gold-soft transition-colors">Give →</a>
-          </div>
-
-          <div className="bg-white/5 border border-white/10 rounded-[16px] p-8 hover:bg-white/10 transition-colors">
-            <div className="text-[48px] font-fraunces font-bold text-gold mb-4">04 /</div>
-            <h4 className="font-fraunces font-bold text-[20px] text-white mb-3">Plant a Chapter</h4>
-            <p className="text-[14px] text-green-100 leading-relaxed mb-6">
-              Start a GTIM community in your city or school — we'll walk with you every step.
-            </p>
-            <a href="#" className="inline-flex items-center gap-1 text-[13px] font-semibold text-gold hover:text-gold-soft transition-colors">Enquire →</a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={openJoinModal}
+              className="inline-flex items-center gap-2 px-8 py-4 text-[15px] font-semibold rounded-xl bg-gradient-to-r from-green-600 to-green-700 text-white hover:from-green-700 hover:to-green-800 shadow-lg hover:shadow-xl transition-all cursor-pointer"
+            >
+              Join Now
+              <ArrowRight className="w-4 h-4" />
+            </button>
+            <Link
+              to="/membership"
+              className="inline-flex items-center gap-2 px-8 py-4 text-[15px] font-semibold rounded-xl border border-white/20 text-white hover:bg-white/10 transition-all"
+            >
+              Learn More
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </ScrollReveal>
       </div>

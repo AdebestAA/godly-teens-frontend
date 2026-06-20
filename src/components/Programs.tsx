@@ -1,5 +1,6 @@
 import React from "react";
-import { Flame, Crown, Palette, Calendar, Clock } from "lucide-react";
+import { Flame, Crown, Palette, Calendar, Clock, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -8,7 +9,27 @@ const iconMap: Record<string, React.ReactNode> = {
   palette: <Palette className="w-5 h-5" />,
 };
 
-const Programs: React.FC = () => {
+const Programs: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
+  if (teaser) {
+    return (
+      <section className="bg-white py-20 overflow-hidden" id="programs">
+        <div className="max-w-3xl mx-auto px-4 sm:px-7 text-center">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">Our Programmes</span>
+          <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-tight mb-6">
+            Impactful and Engaging Programmes for{" "}
+            <em className="font-fraunces italic font-medium text-gold-dark">Spiritual Growth & Development</em>
+          </h2>
+          <p className="text-lg text-ink-60 max-w-2xl mx-auto mb-8">
+            At Godly Teens International Ministry, we run impactful and engaging programmes designed to nurture teenagers and young adults spiritually, intellectually, and socially.
+          </p>
+          <Link to="/programs" className="inline-flex items-center gap-2 px-8 py-4 text-[15px] font-semibold rounded-xl bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl transition-all">
+            Learn More <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+    );
+  }
+
   const programs = [
     {
       id: 1,
