@@ -82,15 +82,15 @@ const Blog: React.FC = () => {
     },
   ];
 
-  const categories = [
-    "All",
-    "Testimonies",
-    "Programs",
-    "About Us",
-    "Ministry",
-    "Spirituality",
-    "Community",
-  ];
+  // const categories = [
+  //   "All",
+  //   "Testimonies",
+  //   "Programs",
+  //   "About Us",
+  //   "Ministry",
+  //   "Spirituality",
+  //   "Community",
+  // ];
 
   return (
     <section className="bg-white py-[110px] overflow-hidden" id="blog">
