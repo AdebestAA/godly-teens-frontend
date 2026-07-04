@@ -95,7 +95,7 @@ const Blog: React.FC = () => {
   return (
     <section className="bg-white py-[110px] overflow-hidden" id="blog">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-7">
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
             Blog & Articles
           </span>
@@ -107,7 +107,6 @@ const Blog: React.FC = () => {
             believers and leaders.
           </p>
 
-          {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-2 mb-12">
             {categories.map((category) => (
               <button
@@ -122,10 +121,10 @@ const Blog: React.FC = () => {
               </button>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Featured Article */}
-        {articles
+        {/* {articles
           .filter((article) => article.featured)
           .map((article) => (
             <article key={article.id} className="mb-16">
@@ -181,7 +180,7 @@ const Blog: React.FC = () => {
                 </div>
               </div>
             </article>
-          ))}
+          ))} */}
 
         {/* Article Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

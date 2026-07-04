@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -14,29 +14,39 @@ import PartnershipPage from "./pages/PartnershipPage";
 
 import ContactPage from "./pages/ContactPage";
 import AdminPage from "./pages/AdminPage";
+import AdminMembersPage from "./pages/AdminMembersPage";
+
+function AppLayout() {
+  const location = useLocation();
+  const isAdmin = location.pathname.startsWith("/admin");
+
+  return (
+    <div>
+      {!isAdmin && <Nav />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/programs" element={<ProgramsPage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/event-details" element={<EventDetailsPage />} />
+        <Route path="/media" element={<MediaPage />} />
+        <Route path="/membership" element={<MembershipPage />} />
+        <Route path="/partnership" element={<PartnershipPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/admin/members" element={<AdminMembersPage />} />
+      </Routes>
+      {!isAdmin && <Footer />}
+      <JoinModal />
+      <Toaster position="top-center" toastOptions={{ duration: 4000 }} />
+    </div>
+  );
+}
 
 function App() {
   return (
     <Router>
-      <div>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/programs" element={<ProgramsPage />} />
-          <Route path="/events" element={<EventsPage />} />
-          <Route path="/event-details" element={<EventDetailsPage />} />
-          <Route path="/media" element={<MediaPage />} />
-          <Route path="/membership" element={<MembershipPage />} />
-          <Route path="/partnership" element={<PartnershipPage />} />
-          {/* <Route path="/donation" element={<DonationPage />} /> */}
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/admin" element={<AdminPage />} />
-        </Routes>
-        <Footer />
-        <JoinModal />
-        <Toaster position="top-center" toastOptions={{ duration: 4000 }} />
-      </div>
+      <AppLayout />
     </Router>
   );
 }
