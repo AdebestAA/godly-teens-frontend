@@ -8,7 +8,7 @@ const Donate: React.FC = () => {
       <div className="max-w-[1280px] mx-auto px-7 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <ScrollReveal direction="left">
           <div>
-            <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+            <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
               Partner with us
             </span>
             <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-[-0.025em] mb-5">
@@ -18,8 +18,8 @@ const Donate: React.FC = () => {
               </em>
             </h2>
             <p className="text-ink-60 mb-7 max-w-[480px]">
-              Every teen reached, every sermon recorded, every chapter planted —
-              all of it is made possible by faithful partners like you. Give once
+              Every teen reached, every sermon recorded, every chapter planted.
+              All of it is made possible by faithful partners like you. Give once
               or monthly, securely and transparently.
             </p>
 
@@ -58,42 +58,43 @@ const Donate: React.FC = () => {
         </ScrollReveal>
 
         <ScrollReveal direction="right">
-          <aside className="bg-paper border border-line rounded-[20px] p-9 bg-white border-2 border-green-100">
+          <aside className="relative bg-white border-2 border-green-100 rounded-2xl p-9 shadow-md overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800" />
             <h4 className="font-montserrat text-[18px] font-bold mb-5">
               Make a donation
             </h4>
-            <div className="flex gap-2 bg-white p-1.5 border border-line rounded-[10px] mb-3.5 bg-white border-2 border-green-100">
-              <button className="flex-1 p-2.5 text-[13px] font-semibold text-ink-60 rounded-md transition-all bg-green-500 text-white">
+            <div className="flex gap-2 bg-green-50 p-1.5 border-2 border-green-100 rounded-xl mb-3.5">
+              <button className="flex-1 p-2.5 text-[13px] font-semibold rounded-lg transition-all bg-linear-to-br from-green-500 to-green-600 text-white shadow-sm">
                 One-time
               </button>
-              <button className="flex-1 p-2.5 text-[13px] font-semibold text-ink-60 rounded-md transition-all">
+              <button className="flex-1 p-2.5 text-[13px] font-semibold text-ink-60 rounded-lg transition-all hover:text-green-800">
                 Monthly
               </button>
-              <button className="flex-1 p-2.5 text-[13px] font-semibold text-ink-60 rounded-md transition-all">
+              <button className="flex-1 p-2.5 text-[13px] font-semibold text-ink-60 rounded-lg transition-all hover:text-green-800">
                 Annually
               </button>
             </div>
             <div className="grid grid-cols-3 gap-2.5 mb-3.5">
-              <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-500">
+              <button className="p-3.5 pb-2 text-center bg-white border-2 border-green-100 rounded-xl font-bold text-[15px] text-ink transition-all hover:border-gold hover:-translate-y-0.5 hover:shadow-md">
                 ₦2,500
               </button>
-              <button className="p-3.5 pb-2 text-center bg-green-500 text-white border-1.5 border-green-500 rounded-[10px] font-bold text-[15px] transition-all">
+              <button className="p-3.5 pb-2 text-center bg-linear-to-br from-green-500 to-green-600 text-white border-2 border-transparent rounded-xl font-bold text-[15px] shadow-md transition-all">
                 ₦10,000
               </button>
-              <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-500">
+              <button className="p-3.5 pb-2 text-center bg-white border-2 border-green-100 rounded-xl font-bold text-[15px] text-ink transition-all hover:border-gold hover:-translate-y-0.5 hover:shadow-md">
                 ₦25,000
               </button>
-              <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-500">
+              <button className="p-3.5 pb-2 text-center bg-white border-2 border-green-100 rounded-xl font-bold text-[15px] text-ink transition-all hover:border-gold hover:-translate-y-0.5 hover:shadow-md">
                 ₦50,000
               </button>
-              <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-500">
+              <button className="p-3.5 pb-2 text-center bg-white border-2 border-green-100 rounded-xl font-bold text-[15px] text-ink transition-all hover:border-gold hover:-translate-y-0.5 hover:shadow-md">
                 ₦100,000
               </button>
-              <button className="p-3.5 pb-2 text-center bg-white border-1.5 border-line rounded-[10px] font-bold text-[15px] text-ink transition-all hover:border-green-500">
+              <button className="p-3.5 pb-2 text-center bg-white border-2 border-green-100 rounded-xl font-bold text-[15px] text-ink transition-all hover:border-gold hover:-translate-y-0.5 hover:shadow-md">
                 Other
               </button>
             </div>
-            <div className="flex items-center p-3.5 px-4 bg-white border-1.5 border-line rounded-[10px] mb-5">
+            <div className="flex items-center p-3.5 px-4 bg-white border-2 border-green-100 rounded-xl mb-5 focus-within:border-green-500 transition-colors">
               <span className="text-ink-40 mr-2 font-semibold">₦</span>
               <input
                 type="text"
@@ -102,7 +103,7 @@ const Donate: React.FC = () => {
                 className="flex-1 border-none bg-transparent font-inherit font-semibold text-[15px] outline-none"
               />
             </div>
-            <button className="inline-flex items-center gap-2 px-[22px] py-4 text-[15px] font-semibold rounded-[10px] transition-all duration-220 border border-transparent bg-green-500 text-white hover:bg-green-600 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)] cursor-pointer w-full justify-center">
+            <button className="inline-flex items-center gap-2 px-[22px] py-4 text-[15px] font-semibold rounded-xl transition-all duration-220 border border-transparent bg-linear-to-r from-green-600 to-green-700 text-white hover:from-green-700 hover:to-green-800 hover:-translate-y-0.5 shadow-lg hover:shadow-xl cursor-pointer w-full justify-center">
               Donate Securely
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M13 5l7 7-7 7" />

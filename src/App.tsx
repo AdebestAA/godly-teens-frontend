@@ -3,6 +3,7 @@ import { Toaster } from "react-hot-toast";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import JoinModal from "./components/JoinModal";
+import WhatsAppButton from "./components/WhatsAppButton";
 import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import ProgramsPage from "./pages/ProgramsPage";
@@ -37,6 +38,7 @@ function AppLayout() {
         <Route path="/admin/members" element={<AdminMembersPage />} />
       </Routes>
       {!isAdmin && <Footer />}
+      {!isAdmin && <WhatsAppButton />}
       <JoinModal />
       <Toaster position="top-center" toastOptions={{ duration: 4000 }} />
     </div>

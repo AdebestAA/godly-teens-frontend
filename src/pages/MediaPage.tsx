@@ -7,7 +7,6 @@ const MediaPage: React.FC = () => {
     <div>
       <Media />
       <Blog />
-      {/* <Gallery /> */}
     </div>
   );
 };

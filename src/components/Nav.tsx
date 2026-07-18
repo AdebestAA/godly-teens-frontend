@@ -15,7 +15,11 @@ const Nav: React.FC = () => {
             to="/"
             className=" gap-3 font-montserrat font-extrabold text-[17px] tracking-[-0.01em]"
           >
-            <img src="/logo-two.png" alt="logo" className="w-15 h-15" />
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="w-15 h-15 rounded-full"
+            />
             {/* <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}

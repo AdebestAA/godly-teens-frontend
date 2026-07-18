@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               </div>
             </Link>
             <p className="text-[13px] text-green-100 leading-relaxed">
-              Raising the next generation in faith, purpose and Kingdom impact — from Ibadan to the world.
+              Raising the next generation in faith, purpose and Kingdom impact, from Ibadan to the world.
             </p>
           </div>
 

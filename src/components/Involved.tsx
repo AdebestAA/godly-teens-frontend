@@ -11,7 +11,7 @@ const Involved: React.FC = () => {
     <section className="bg-green-900 py-[80px] overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-7 text-center">
         <ScrollReveal direction="up">
-          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-gold mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-gold mb-4">
             Get Involved
           </span>
           <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-[-0.025em] text-white mb-6">
@@ -19,7 +19,7 @@ const Involved: React.FC = () => {
             <em className="font-fraunces italic font-medium text-gold-soft">step in?</em>
           </h2>
           <p className="text-green-100 max-w-xl mx-auto mb-8 leading-relaxed">
-            Become a member, volunteer, partner financially, or plant a chapter — there's a place for you in this movement.
+            Become a member, volunteer, partner financially, or plant a chapter. There's a place for you in this movement.
           </p>
 
           <div className="flex items-center justify-center gap-8 mb-8">
