@@ -177,10 +177,126 @@ Hmmm, Not that alone sir...i enjoy many connection through you...I remember YESO
 
 My prayer for you sir ,is that God almighty will reward you for all you labour in Jesus name.`,
   },
+  {
+    id: 10,
+    name: "Okikiade Adediran",
+    initials: "OA",
+    avatar: "from-green-600 to-green-800",
+    message: `I want to sincerely thank God for the privilege of being part of this ministry during my time in tertiary institution.
+
+My first encounter was literally divine, the ministry brought balance to my life, how the scriptures is the foundation to other aspect of life and how other aspect of life can be used to reach others for God.
+
+The ministry gave me a sense of family. The family took me in when I had no where to stay, how can I forget that. I was surrounded by people who genuinely cared, encouraged me, and helped me grow in faith and character (my little time with mummy helped my interpersonal relationship and accountability). It shaped my mindset, discipline, and purpose.
+
+Today, I can boldly say that my life has been transformed. I am more focused, spiritually grounded, and confident about my future.
+
+I am truly grateful for this ministry and everyone God has used to impact my life.`,
+  },
+  {
+    id: 11,
+    name: "Ibikunle Oluwakemisola",
+    initials: "IO",
+    avatar: "from-gold-soft to-gold-dark",
+    message: `Joining royal elites shaped all aspects of my life, spiritually, morally,financial wise, mentally,.etc.. thank you sir for being a blessing to my generation, thanks for yielding sir,mum thanks for being supportive,and accommodating, thanks for being a mother of all I love ma,may God almighty reward your labour of love
+
+Long life Dr&Engineer Fawole
+
+Long life Godly teens.
+
+Long life Royal elite
+
+Am so glad to be part of this big family of Christ.❤️`,
+  },
+  {
+    id: 12,
+    name: "Ayomikun Faith",
+    initials: "AF",
+    avatar: "from-emerald-500 to-green-700",
+    message: `As Godly Teens International marks its 20th anniversary, my heart is filled with gratitude. This ministry has shaped my life spiritually, academically, emotionally, and mentally. I am a proud beneficiary of its impact, and I thank God for the vision behind it. My sincere appreciation goes to Engineer and Dr. Fawole for their dedication and love towards raising godly children and teenagers. Through this ministry, I have grown into a better version of myself. Thank you, God, for Godly Teens International and for the lives it continues to transform.`,
+  },
+  {
+    id: 13,
+    name: "Oluwalana Oluwapelumi",
+    initials: "OO",
+    avatar: "from-green-700 to-green-900",
+    message: `Oh!! How I love this Family of God
+
+A family that made me realize you do not have to be related by blood to be genuinely part of and be loved`,
+  },
+  {
+    id: 14,
+    name: "Areola Rachael",
+    initials: "AR",
+    avatar: "from-green-500 to-emerald-700",
+    message: `My name is Rachael I am happy and proud to be one of this amazing family, a family that bring me more closer to God , a family that made me feel life is worth fighting for, a family that made me realize that we are all perfect in our imperfection.
+
+To my beloved Engineer God will continue to strengthen you sir thanks for all you do and to my wonderful mummy Doctor Fawole God will continue to be with you ma, my beloved papa Ezra you are wonderful God continue to bless you .
+
+I love this family of God ❤️❤️❤️❤️❤️🥰`,
+  },
+  {
+    id: 15,
+    name: "Okuntilu Jemima",
+    initials: "OJ",
+    avatar: "from-gold to-gold-dark",
+    message: `My name is Opeyimika,the knowledge i acquired in Godly teens made me now a children teacher in my local church.Godly teens had impacted the passion for ministry to children which i didn't have the vision before. I appreciate the convener of the ministry Enginner Fawole the Lord will continually uphold you and your wife Dr. Mrs. Fawole in Jesus name. Thank you sir/ma.`,
+  },
+  {
+    id: 16,
+    name: "Oseji Deborah Monioluwa",
+    initials: "OD",
+    avatar: "from-green-600 to-emerald-800",
+    message: `Good day everyone,
+
+Thank you so much for this opportunity.
+
+I am truly grateful to God for Godly Teens International Ministries. This ministry is one of the major platforms God used to shape who I am today and strengthen my walk with Him.
+
+The image I shared here is from about 14 years ago, during the time I had the privilege of serving as the music teacher for Godly Teens. Those moments remain a vital part of my journey, and I am still glad to be part of this family even till today.
+
+I pray that the vision of raising Godly teenagers will never fade, but will continue to grow stronger in Christ Jesus. May God continually uphold and strengthen the visioner, and may this ministry keep impacting lives for generations to come.
+
+Thank you and God bless. ❤️`,
+  },
+  {
+    id: 17,
+    name: "Olumide Isaiah Olayiwola",
+    initials: "OI",
+    avatar: "from-green-500 to-green-800",
+    message: `Am olayiwola olumide CEO of achiever photography
+
+Am really happy to be part of the house ...this house is the foundation of my Christian life....it brings me to good path and I never regret joining the house...`,
+  },
+  {
+    id: 18,
+    name: "Fawole Taiwo Ganiyu",
+    initials: "FT",
+    avatar: "from-gold to-green-800",
+    message: `Words feel too small to fully capture all that God has done for us. From the very beginning, He has been our strength, our source, and our sustainer. When we were weak, He lifted us. When we felt low, He raised us from the ground and set us in a higher place. His hand has been evident in every step of this journey.
+
+Since the birth of Godly Teens, there has never been a vision, a plan, or a desire aligned with His will that He has not made a way for. Time and again, He has gone ahead of us, clearing paths where there seemed to be none. What looked impossible became possible, not by our effort, but by His grace.
+
+In the early days of this ministry, God gave us a clear instruction: that He Himself would be our provider, and that we should not rely on human strategies such as fundraising. That instruction required faith, and today, it stands as a testimony. God has honored His word. He has provided beyond our expectations, abundantly, generously, and consistently. His provision has not just been enough; it has overflowed.
+
+Through every challenge, every need, and every moment of uncertainty, He has remained faithful. He has supplied, sustained, and surprised us with His goodness. We have seen His promises come alive, not just in words, but in tangible ways.
+
+Today, our hearts are filled with gratitude. We look back and see His fingerprints everywhere, guiding, protecting, and blessing. We acknowledge that all we are and all we have is because of Him.
+
+So we say, with sincere and thankful hearts: Thank You, Lord. Thank You for Your faithfulness. Thank You for Your provision. Thank You for choosing us, for sustaining this ministry, and for continually showing us that when we trust You fully, You never fail.
+
+All glory belongs to You.`,
+  },
 ];
+
+/** How many cards to show before the reader asks for more. */
+const INITIAL_COUNT = 6;
 
 const Testimonies: React.FC = () => {
   const [active, setActive] = useState<Testimony | null>(null);
+  const [expanded, setExpanded] = useState(false);
+
+  const visible = expanded ? TESTIMONIES : TESTIMONIES.slice(0, INITIAL_COUNT);
+  const hasMore = TESTIMONIES.length > INITIAL_COUNT;
 
   const close = useCallback(() => setActive(null), []);
 
@@ -229,7 +345,7 @@ const Testimonies: React.FC = () => {
           staggerDelay={0.15}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start"
         >
-          {TESTIMONIES.map((t) => (
+          {visible.map((t) => (
             <article
               key={t.id}
               className="group relative flex flex-col h-full bg-white border-2 border-green-100 rounded-2xl p-7 pt-8 shadow-md hover:shadow-2xl hover:border-gold hover:-translate-y-1 transition-all duration-500 overflow-hidden"
@@ -280,6 +396,32 @@ const Testimonies: React.FC = () => {
             </article>
           ))}
         </ScrollReveal>
+
+        {hasMore && (
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setExpanded((v) => !v)}
+              className="inline-flex items-center gap-2 px-7 py-3.5 text-[14px] font-semibold text-green-800 border-2 border-green-100 rounded-xl hover:border-green-800 hover:bg-green-50 transition-all"
+            >
+              {expanded
+                ? "Show fewer testimonies"
+                : `Read all ${TESTIMONIES.length} testimonies`}
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                className={`transition-transform duration-300 ${
+                  expanded ? "rotate-180" : ""
+                }`}
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Full-message modal */}
