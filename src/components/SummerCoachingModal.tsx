@@ -1,15 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Calendar,
-  MapPin,
-  Phone,
-  X,
-  Cpu,
-  Users,
-  Plane,
-  Star,
-} from "lucide-react";
+import { Calendar, MapPin, Phone, X, Cpu, Users } from "lucide-react";
 
 /**
  * false = the modal opens on every visit to the landing page.
