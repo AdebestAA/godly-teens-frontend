@@ -96,7 +96,7 @@ const Blog: React.FC = () => {
     <section className="bg-white py-[110px] overflow-hidden" id="blog">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-7">
         {/* <div className="text-center mb-12">
-          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
             Blog & Articles
           </span>
           <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-[-0.025em] text-ink mb-6">
@@ -189,13 +189,14 @@ const Blog: React.FC = () => {
             .map((article) => (
               <article
                 key={article.id}
-                className="border border-line rounded-[16px] overflow-hidden hover:shadow-lg transition-shadow"
+                className="group relative bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold hover:-translate-y-1 transition-all duration-500 overflow-hidden"
               >
+                <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 z-10" />
                 <div className="h-[200px] overflow-hidden">
                   <img
                     src={article.image}
                     alt={article.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

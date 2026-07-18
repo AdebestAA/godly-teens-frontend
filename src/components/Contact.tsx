@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
       <div className="max-w-[1280px] mx-auto px-7 grid grid-cols-1 lg:grid-cols-2 gap-16">
         <ScrollReveal direction="left">
           <div>
-            <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+            <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
               Get in touch
             </span>
             <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-[-0.025em] mb-5">
@@ -43,12 +43,12 @@ const Contact: React.FC = () => {
             </h2>
             <p className="text-ink-60 mb-8 max-w-[480px] leading-relaxed">
               Questions about events, partnerships, or starting a chapter? Drop
-              us a line or visit us in Ibadan — we answer every message.
+              us a line or visit us in Ibadan. We answer every message.
             </p>
 
             <div className="flex flex-col gap-5 mb-10">
               <div className="flex items-start gap-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-100 flex-shrink-0 mt-0.5">
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-linear-to-br from-green-500 to-green-700 shadow-md flex-shrink-0 mt-0.5">
                   <svg
                     width="18"
                     height="18"
@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="text-green-800"
+                    className="text-white"
                   >
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                     <circle cx="12" cy="10" r="3" />
@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-100 flex-shrink-0 mt-0.5">
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-linear-to-br from-green-500 to-green-700 shadow-md flex-shrink-0 mt-0.5">
                   <svg
                     width="18"
                     height="18"
@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="text-green-800"
+                    className="text-white"
                   >
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
                   </svg>
@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-100 flex-shrink-0 mt-0.5">
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-linear-to-br from-green-500 to-green-700 shadow-md flex-shrink-0 mt-0.5">
                   <svg
                     width="18"
                     height="18"
@@ -105,7 +105,7 @@ const Contact: React.FC = () => {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="text-green-800"
+                    className="text-white"
                   >
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
@@ -202,8 +202,9 @@ const Contact: React.FC = () => {
         <ScrollReveal direction="right">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="border border-line rounded-[16px] p-8 bg-white border-2 border-green-100"
+            className="relative border-2 border-green-100 rounded-2xl p-8 bg-white shadow-md hover:shadow-xl transition-shadow duration-500 overflow-hidden"
           >
+            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800" />
             <h3 className="font-fraunces font-bold text-[24px] mb-2 text-ink">
               Send a message
             </h3>
@@ -220,7 +221,7 @@ const Contact: React.FC = () => {
                   {...register("first_name")}
                   type="text"
                   placeholder="Grace"
-                  className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent border-2 border-green-100"
+                  className="w-full px-4 py-3 border-2 border-green-100 rounded-xl bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-colors"
                 />
                 {errors.first_name && (
                   <p className="text-red-500 text-xs mt-1">
@@ -236,7 +237,7 @@ const Contact: React.FC = () => {
                   {...register("last_name")}
                   type="text"
                   placeholder="Okafor"
-                  className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent border-2 border-green-100"
+                  className="w-full px-4 py-3 border-2 border-green-100 rounded-xl bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-colors"
                 />
                 {errors.last_name && (
                   <p className="text-red-500 text-xs mt-1">
@@ -253,7 +254,7 @@ const Contact: React.FC = () => {
                 {...register("email")}
                 type="email"
                 placeholder="grace@example.com"
-                className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent border-2 border-green-100"
+                className="w-full px-4 py-3 border-2 border-green-100 rounded-xl bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-colors"
               />
               {errors.email && (
                 <p className="text-red-500 text-xs mt-1">
@@ -267,7 +268,7 @@ const Contact: React.FC = () => {
               </label>
               <select
                 {...register("interested_in")}
-                className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent border-2 border-green-100"
+                className="w-full px-4 py-3 border-2 border-green-100 rounded-xl bg-white text-ink focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-colors"
               >
                 <option value="">Select an option</option>
                 <option value="Joining a chapter">Joining a chapter</option>
@@ -293,7 +294,7 @@ const Contact: React.FC = () => {
               <textarea
                 {...register("message")}
                 placeholder="Tell us what's on your heart..."
-                className="w-full px-4 py-3 border border-line rounded-[10px] bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent min-h-[120px] resize-none border-2 border-green-100"
+                className="w-full px-4 py-3 border-2 border-green-100 rounded-xl bg-white text-ink placeholder-ink-40 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent transition-colors min-h-[120px] resize-none"
               ></textarea>
               {errors.message && (
                 <p className="text-red-500 text-xs mt-1">
@@ -304,7 +305,7 @@ const Contact: React.FC = () => {
             <button
               type="submit"
               disabled={mutation.isPending}
-              className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-[15px] font-semibold text-white bg-green-600 hover:bg-green-600 rounded-[10px] transition-all duration-220 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-10px_rgba(11,107,58,0.5)] disabled:opacity-60 disabled:cursor-not-allowed"
+              className="inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-[15px] font-semibold text-white bg-linear-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 rounded-xl shadow-lg transition-all duration-220 hover:-translate-y-0.5 hover:shadow-xl disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {mutation.isPending ? "Sending..." : "Send message"}
               <svg

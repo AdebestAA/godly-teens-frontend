@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
         <div
           className="w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&auto=format&fit=crop&q=80')`,
+            backgroundImage: `url('https://res.cloudinary.com/ddojoiqku/image/upload/v1784386241/hero_g6em6c.jpg?w=1920&auto=format&fit=crop&q=80')`,
           }}
         />
         {/* Multiple overlay gradients for depth */}
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="inline-flex items-center gap-2.5 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-[12px] font-semibold tracking-[0.06em] uppercase mb-6"
             >
-              <Globe className="w-4 h-4 inline" /> A Global Youth Movement —
+              <Globe className="w-4 h-4 inline" /> A Global Youth Movement ·
               Est. Ibadan, Nigeria
             </motion.span>
 

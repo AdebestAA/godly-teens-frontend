@@ -131,7 +131,7 @@ const AdminMembers: React.FC = () => {
             <div className="flex items-center justify-between mt-5">
               <p className="text-ink-50 text-[13px]">
                 {total > 0
-                  ? `Showing ${startItem}–${endItem} of ${total} members`
+                  ? `Showing ${startItem}-${endItem} of ${total} members`
                   : "No members"}
               </p>
               <div className="flex items-center gap-1.5">

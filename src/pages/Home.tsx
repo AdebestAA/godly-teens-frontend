@@ -10,10 +10,12 @@ import Testimonies from "../components/Testimonies";
 
 import Involved from "../components/Involved";
 import Contact from "../components/Contact";
+import SummerCoachingModal from "../components/SummerCoachingModal";
 
 const Home: React.FC = () => {
   return (
     <div>
+      <SummerCoachingModal />
       <Hero />
       <ScriptureRibbon />
       <About teaser />

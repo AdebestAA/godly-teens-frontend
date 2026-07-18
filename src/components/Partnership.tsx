@@ -76,7 +76,7 @@ const Partnership: React.FC = () => {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-7">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
             Partnership Program
           </span>
           <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-[-0.025em] text-ink mb-6">
@@ -94,8 +94,9 @@ const Partnership: React.FC = () => {
             Why Partner with GTIM?
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 rounded-full bg-green-100 text-green-800 grid place-items-center mx-auto mb-4">
+            <div className="group relative text-center p-6 bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+              <div className="w-16 h-16 rounded-full bg-linear-to-br from-green-400 to-green-600 text-white grid place-items-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                 <svg
                   width="24"
                   height="24"
@@ -116,8 +117,9 @@ const Partnership: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 rounded-full bg-green-100 text-green-800 grid place-items-center mx-auto mb-4">
+            <div className="group relative text-center p-6 bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+              <div className="w-16 h-16 rounded-full bg-linear-to-br from-green-400 to-green-600 text-white grid place-items-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                 <svg
                   width="24"
                   height="24"
@@ -141,8 +143,9 @@ const Partnership: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="w-16 h-16 rounded-full bg-green-100 text-green-800 grid place-items-center mx-auto mb-4">
+            <div className="group relative text-center p-6 bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+              <div className="w-16 h-16 rounded-full bg-linear-to-br from-green-400 to-green-600 text-white grid place-items-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500">
                 <svg
                   width="24"
                   height="24"
@@ -174,8 +177,9 @@ const Partnership: React.FC = () => {
             {partnershipOptions.map((option, index) => (
               <div
                 key={index}
-                className="border border-line rounded-[16px] p-6 hover:shadow-lg transition-shadow"
+                className="group relative bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold hover:-translate-y-1 transition-all duration-500 overflow-hidden p-6"
               >
+                <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                 <div className="text-center mb-6">
                   <h4 className="font-fraunces font-bold text-[20px] text-ink mb-2">
                     {option.level}
@@ -212,9 +216,10 @@ const Partnership: React.FC = () => {
             {currentPartners.map((partner, index) => (
               <div
                 key={index}
-                className="text-center p-4 border border-line rounded-[12px] hover:border-green-200 transition-colors"
+                className="group relative bg-white text-center p-4 border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold hover:-translate-y-1 transition-all duration-500 overflow-hidden"
               >
-                <div className="text-[32px] mb-2">{partnerIconMap[partner.type]}</div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                <div className="w-14 h-14 rounded-xl bg-linear-to-br from-green-400 to-green-600 text-white grid place-items-center mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform duration-500">{partnerIconMap[partner.type]}</div>
                 <h4 className="font-semibold text-[14px] text-ink mb-1">
                   {partner.name}
                 </h4>
@@ -225,7 +230,7 @@ const Partnership: React.FC = () => {
         </div>
 
         {/* Partnership Form */}
-        <div className="bg-paper border border-line rounded-[20px] p-8">
+        <div className="bg-paper border-2 border-green-100 rounded-2xl shadow-sm p-8">
           <div className="max-w-2xl mx-auto">
             <h3 className="font-montserrat font-bold text-[24px] text-ink text-center mb-2">
               Start Your Partnership

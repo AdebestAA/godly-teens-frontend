@@ -1,5 +1,12 @@
 import React from "react";
-import { Flame, Crown, Palette, Calendar, Clock, ArrowRight } from "lucide-react";
+import {
+  Flame,
+  Crown,
+  Palette,
+  Calendar,
+  Clock,
+  ArrowRight,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 
@@ -14,15 +21,24 @@ const Programs: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
     return (
       <section className="bg-white py-20 overflow-hidden" id="programs">
         <div className="max-w-3xl mx-auto px-4 sm:px-7 text-center">
-          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">Our Programmes</span>
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
+            Our Programmes
+          </span>
           <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-tight mb-6">
             Impactful and Engaging Programmes for{" "}
-            <em className="font-fraunces italic font-medium text-gold-dark">Spiritual Growth & Development</em>
+            <em className="font-fraunces italic font-medium text-gold-dark">
+              Spiritual Growth & Development
+            </em>
           </h2>
           <p className="text-lg text-ink-60 max-w-2xl mx-auto mb-8">
-            At Godly Teens International Ministry, we run impactful and engaging programmes designed to nurture teenagers and young adults spiritually, intellectually, and socially.
+            At Godly Teens International Ministry, we run impactful and engaging
+            programmes designed to nurture teenagers and young adults
+            spiritually, intellectually, and socially.
           </p>
-          <Link to="/programs" className="inline-flex items-center gap-2 px-8 py-4 text-[15px] font-semibold rounded-xl bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl transition-all">
+          <Link
+            to="/programs"
+            className="inline-flex items-center gap-2 px-8 py-4 text-[15px] font-semibold rounded-xl bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl transition-all"
+          >
             Learn More <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -33,48 +49,55 @@ const Programs: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
   const programs = [
     {
       id: 1,
-      title: "Teen Fire Nights",
-      category: "Discipleship",
-      frequency: "Weekly",
-      duration: "90 mins",
-      description:
-        "A weekly worship and teaching gathering for teens to encounter God, study Scripture and build lasting friendships.",
-      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&auto=format&fit=crop&q=80",
+      title: "Summer Coaching",
+      category: "IT",
+      frequency: "Daily",
+      duration: "",
+      description: (
+        <>
+          20<sup>TH</sup> Anniversary Summer Coaching for Tenegers
+        </>
+      ),
+      image: "/twenty-ann.jpeg",
       gradient: "from-green-600 to-green-800",
       icon: "flame",
       attendees: 3,
     },
-    {
-      id: 2,
-      title: "Emerging Leaders Academy",
-      category: "Leadership",
-      frequency: "Monthly",
-      duration: "Half-day",
-      description: "A six-month cohort developing young leaders in character, public speaking, business and civic engagement.",
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&auto=format&fit=crop&q=80",
-      gradient: "from-gold-soft to-gold-dark",
-      icon: "crown",
-      attendees: 3,
-    },
-    {
-      id: 3,
-      title: "Creatives & Arts Lab",
-      category: "Creative",
-      frequency: "Termly",
-      duration: "3 weeks",
-      description: "Music, film, writing and design workshops where young creatives develop their craft as an act of worship.",
-      image: "https://images.unsplash.com/photo-1460661411084-0fd96b3c4bf3?w=600&auto=format&fit=crop&q=80",
-      gradient: "from-purple-500 to-purple-700",
-      icon: "palette",
-      attendees: 3,
-    },
+    // {
+    //   id: 2,
+    //   title: "Emerging Leaders Academy",
+    //   category: "Leadership",
+    //   frequency: "Monthly",
+    //   duration: "Half-day",
+    //   description:
+    //     "A six-month cohort developing young leaders in character, public speaking, business and civic engagement.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&auto=format&fit=crop&q=80",
+    //   gradient: "from-gold-soft to-gold-dark",
+    //   icon: "crown",
+    //   attendees: 3,
+    // },
+    // {
+    //   id: 3,
+    //   title: "Creatives & Arts Lab",
+    //   category: "Creative",
+    //   frequency: "Termly",
+    //   duration: "3 weeks",
+    //   description:
+    //     "Music, film, writing and design workshops where young creatives develop their craft as an act of worship.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1460661411084-0fd96b3c4bf3?w=600&auto=format&fit=crop&q=80",
+    //   gradient: "from-purple-500 to-purple-700",
+    //   icon: "palette",
+    //   attendees: 3,
+    // },
   ];
 
   return (
     <section className="bg-white py-27.5 overflow-hidden" id="programs">
       <div className="max-w-7xl mx-auto px-4 sm:px-7">
         <div className="text-center mb-16">
-          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
             Our Programmes
           </span>
           <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-tight max-w-4xl mx-auto mb-8">
@@ -109,9 +132,9 @@ const Programs: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
                 </div>
 
                 {/* Gradient overlay */}
-                <div
+                {/* <div
                   className={`absolute inset-0 bg-linear-to-t ${program.gradient} opacity-80`}
-                />
+                /> */}
 
                 {/* Category badge */}
                 <div className="absolute top-4 left-4">
@@ -125,7 +148,9 @@ const Programs: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
                 <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="text-center text-white p-4">
                     <div className="mb-2">{iconMap[program.icon]}</div>
-                    <div className="text-sm font-semibold">Click to learn more</div>
+                    <div className="text-sm font-semibold">
+                      Click to learn more
+                    </div>
                   </div>
                 </div>
               </div>
@@ -189,7 +214,7 @@ const Programs: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
         <div className="mt-24">
           <ScrollReveal direction="up">
             <div className="mb-12">
-              <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+              <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
                 What We Offer
               </span>
               <h2 className="font-fraunces text-[32px] font-semibold text-green-800 mb-6">
@@ -198,49 +223,91 @@ const Programs: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
 
               <p className="text-ink-60 leading-relaxed font-medium max-w-3xl">
                 At Godly Teens International Ministry, we run impactful and
-                engaging programmes designed to nurture teenagers and young adults
-                spiritually, intellectually, and socially. Our activities are
-                structured to build a strong foundation in faith while equipping
-                participants with practical life and leadership skills.
+                engaging programmes designed to nurture teenagers and young
+                adults spiritually, intellectually, and socially. Our activities
+                are structured to build a strong foundation in faith while
+                equipping participants with practical life and leadership
+                skills.
               </p>
             </div>
           </ScrollReveal>
 
           {/* Programme Cards Grid */}
-          <ScrollReveal direction="up" staggerDelay={0.12} className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <ScrollReveal
+            direction="up"
+            staggerDelay={0.12}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+          >
             <div className="group relative p-6 bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold transition-all duration-500 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               <div className="relative w-12 h-12 rounded-xl bg-linear-to-br from-blue-400 to-blue-600 text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                   <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                 </svg>
               </div>
-              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">Biweekly Bible Study</h3>
+              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">
+                Biweekly Bible Study
+              </h3>
               <p className="text-ink-60 text-sm leading-relaxed">
-                Held every first and third Saturday of the month, our Bible Study sessions provide a platform for teenagers to grow in their understanding of God's Word, ask questions, and build a deeper relationship with Christ in an interactive and supportive environment.
+                Held every first and third Saturday of the month, our Bible
+                Study sessions provide a platform for teenagers to grow in their
+                understanding of God's Word, ask questions, and build a deeper
+                relationship with Christ in an interactive and supportive
+                environment.
               </p>
             </div>
 
             <div className="group relative p-6 bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold transition-all duration-500 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               <div className="relative w-12 h-12 rounded-xl bg-linear-to-br from-purple-400 to-purple-600 text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
                   <polyline points="17 21 17 13 7 13 7 21"></polyline>
                   <polyline points="7 5 7 13 17 13 17 5"></polyline>
                 </svg>
               </div>
-              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">Retreats</h3>
+              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">
+                Retreats
+              </h3>
               <p className="text-ink-60 text-sm leading-relaxed">
-                Our retreats offer opportunities for spiritual renewal through intensive teaching, worship, reflection, and personal encounters with God.
+                Our retreats offer opportunities for spiritual renewal through
+                intensive teaching, worship, reflection, and personal encounters
+                with God.
               </p>
             </div>
 
             <div className="group relative p-6 bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold transition-all duration-500 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               <div className="relative w-12 h-12 rounded-xl bg-linear-to-br from-rose-400 to-rose-600 text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <circle cx="12" cy="12" r="1"></circle>
                   <path d="M12 1v6"></path>
                   <path d="M12 17v6"></path>
@@ -252,58 +319,108 @@ const Programs: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
                   <path d="M15.54 8.46l4.24-4.24"></path>
                 </svg>
               </div>
-              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">Fasting & Prayer Programmes</h3>
+              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">
+                Fasting & Prayer Programmes
+              </h3>
               <p className="text-ink-60 text-sm leading-relaxed">
-                These programmes help teenagers develop spiritual discipline, deepen their prayer life, and strengthen their dependence on God.
+                These programmes help teenagers develop spiritual discipline,
+                deepen their prayer life, and strengthen their dependence on
+                God.
               </p>
             </div>
 
             <div className="group relative p-6 bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold transition-all duration-500 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               <div className="relative w-12 h-12 rounded-xl bg-linear-to-br from-orange-400 to-orange-600 text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <circle cx="12" cy="12" r="9"></circle>
                   <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
                   <line x1="12" y1="17" x2="12.01" y2="17"></line>
                 </svg>
               </div>
-              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">Special Skill Training</h3>
+              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">
+                Special Skill Training
+              </h3>
               <p className="text-ink-60 text-sm leading-relaxed">
-                We equip participants with practical and relevant skills for life, academics, and future careers, including leadership, communication, and personal development.
+                We equip participants with practical and relevant skills for
+                life, academics, and future careers, including leadership,
+                communication, and personal development.
               </p>
             </div>
 
             <div className="group relative p-6 bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold transition-all duration-500 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               <div className="relative w-12 h-12 rounded-xl bg-linear-to-br from-green-400 to-green-600 text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                 </svg>
               </div>
-              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">School Outreach (Mathematics Classes)</h3>
+              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">
+                School Outreach (Mathematics Classes)
+              </h3>
               <p className="text-ink-60 text-sm leading-relaxed">
-                As part of our community impact initiative, we conduct early morning Mathematics classes (7:00 AM) in selected secondary schools, promoting academic excellence and confidence in students.
+                As part of our community impact initiative, we conduct early
+                morning Mathematics classes (7:00 AM) in selected secondary
+                schools, promoting academic excellence and confidence in
+                students.
               </p>
             </div>
 
             <div className="group relative p-6 bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold transition-all duration-500 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               <div className="relative w-12 h-12 rounded-xl bg-linear-to-br from-pink-400 to-pink-600 text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M6 9h12M6 9c0-1 1-2 2-2h8c1 0 2 1 2 2"></path>
                   <path d="M9 9v8c0 1-1 2-2 2H7c-1 0-2-1-2-2v-8"></path>
                   <path d="M15 9v8c0 1 1 2 2 2h2c1 0 2-1 2-2v-8"></path>
                   <path d="M8 18h8v2c0 1-1 2-2 2h-4c-1 0-2-1-2-2v-2z"></path>
                 </svg>
               </div>
-              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">Special Events</h3>
+              <h3 className="font-montserrat font-bold text-green-800 text-base mb-2">
+                Special Events
+              </h3>
               <p className="text-ink-60 text-sm leading-relaxed">
-                We host exciting and spiritually enriching events that combine learning with engagement and fellowship, including:
+                We host exciting and spiritually enriching events that combine
+                learning with engagement and fellowship, including:
               </p>
               <ul className="text-ink-60 text-sm leading-relaxed mt-2 space-y-1">
-                <li>• <strong>Palooza</strong> – a vibrant gathering featuring worship, teachings, and engaging activities.</li>
-                <li>• <strong>Bible and Bagels</strong> – a relaxed and interactive session combining fellowship, Bible discussions, and light refreshments.</li>
+                <li>
+                  • <strong>Palooza</strong>: a vibrant gathering featuring
+                  worship, teachings, and engaging activities.
+                </li>
+                <li>
+                  • <strong>Bible and Bagels</strong>: a relaxed and interactive
+                  session combining fellowship, Bible discussions, and light
+                  refreshments.
+                </li>
               </ul>
             </div>
           </ScrollReveal>
@@ -313,7 +430,16 @@ const Programs: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
             <div className="bg-linear-to-br from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl p-8 mb-8">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-16 h-16 rounded-xl bg-linear-to-br from-emerald-500 to-green-600 text-white flex items-center justify-center shrink-0 shadow-lg">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <path d="M6 9h12"></path>
                     <path d="M6 9c0-1 1-2 2-2h8c1 0 2 1 2 2"></path>
                     <path d="M9 9v10c0 1-1 2-2 2H5c-1 0-2-1-2-2V9"></path>
@@ -321,38 +447,61 @@ const Programs: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-fraunces text-2xl font-semibold text-green-800">Royal Elites (Campus Arm)</h3>
+                  <h3 className="font-fraunces text-2xl font-semibold text-green-800">
+                    Royal Elites (Campus Arm)
+                  </h3>
                 </div>
               </div>
 
               <p className="text-ink-60 mb-6 leading-relaxed">
-                Royal Elites is the campus expression of Godly Teens International Ministry, focused on students in higher institutions. The body is registered as a Bible Club across higher institutions in Ibadan, providing a structured platform for spiritual growth and leadership development among undergraduates.
+                Royal Elites is the campus expression of Godly Teens
+                International Ministry, focused on students in higher
+                institutions. The body is registered as a Bible Club across
+                higher institutions in Ibadan, providing a structured platform
+                for spiritual growth and leadership development among
+                undergraduates.
               </p>
 
               <div className="space-y-4">
                 <div className="flex gap-4">
-                  <div className="shrink-0 w-8 h-8 rounded-full bg-gold text-green-900 flex items-center justify-center font-bold text-sm">•</div>
+                  <div className="shrink-0 w-8 h-8 rounded-full bg-gold text-green-900 flex items-center justify-center font-bold text-sm">
+                    •
+                  </div>
                   <div>
-                    <h4 className="font-semibold text-green-900 mb-1">Weekly Bible Club Meetings</h4>
+                    <h4 className="font-semibold text-green-900 mb-1">
+                      Weekly Bible Club Meetings
+                    </h4>
                     <p className="text-ink-60 text-sm">
-                      Regular on-campus fellowship meetings where students gather for Bible study, worship, prayer, and discussions tailored to campus life and challenges.
+                      Regular on-campus fellowship meetings where students
+                      gather for Bible study, worship, prayer, and discussions
+                      tailored to campus life and challenges.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="shrink-0 w-8 h-8 rounded-full bg-gold text-green-900 flex items-center justify-center font-bold text-sm">•</div>
+                  <div className="shrink-0 w-8 h-8 rounded-full bg-gold text-green-900 flex items-center justify-center font-bold text-sm">
+                    •
+                  </div>
                   <div>
-                    <h4 className="font-semibold text-green-900 mb-1">"Go, Make and Teach" Dinner</h4>
+                    <h4 className="font-semibold text-green-900 mb-1">
+                      "Go, Make and Teach" Dinner
+                    </h4>
                     <p className="text-ink-60 text-sm">
-                      A special gathering designed to inspire and commission students toward evangelism, discipleship, and purposeful living. It combines fellowship, teaching, and networking in a refreshing and impactful atmosphere.
+                      A special gathering designed to inspire and commission
+                      students toward evangelism, discipleship, and purposeful
+                      living. It combines fellowship, teaching, and networking
+                      in a refreshing and impactful atmosphere.
                     </p>
                   </div>
                 </div>
               </div>
 
               <p className="text-ink-80 font-semibold mt-6 pt-6 border-t border-green-300">
-                Through Royal Elites, the ministry continues its mission beyond teenage years, raising spiritually grounded students who will influence their campuses and society with godly values and leadership.
+                Through Royal Elites, the ministry continues its mission beyond
+                teenage years, raising spiritually grounded students who will
+                influence their campuses and society with godly values and
+                leadership.
               </p>
             </div>
           </ScrollReveal>

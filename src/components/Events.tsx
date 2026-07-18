@@ -179,7 +179,7 @@ const Events: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
     return (
       <section className="bg-white py-20 overflow-hidden" id="events">
         <div className="max-w-3xl mx-auto px-7 text-center">
-          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
             Flagship Event
           </span>
           <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-tight mb-6">
@@ -209,7 +209,7 @@ const Events: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
       <div className="max-w-7xl mx-auto px-7">
         <ScrollReveal direction="up">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+            <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
               Flagship Event
             </span>
             <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-tight max-w-4xl mx-auto mb-8">

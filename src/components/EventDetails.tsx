@@ -10,7 +10,7 @@ const EventDetails: React.FC = () => {
     registered: 3247,
     price: "₦15,000 (Early Bird) • ₦25,000 (Regular)",
     description:
-      "Our annual global gathering — 3 days of teaching, worship and mission. Join 6,000+ young believers from 28 nations in Ibadan and online.",
+      "Our annual global gathering. 3 days of teaching, worship and mission. Join 6,000+ young believers from 28 nations in Ibadan and online.",
     agenda: [
       {
         day: "Day 1: Worship & Welcome",
@@ -86,7 +86,7 @@ const EventDetails: React.FC = () => {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-7">
         {/* Event Header */}
         <div className="text-center mb-12">
-          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
             Event Details
           </span>
           <h1 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-[-0.025em] text-ink mb-6">
@@ -99,8 +99,8 @@ const EventDetails: React.FC = () => {
 
         {/* Event Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="bg-paper border border-line rounded-[16px] p-6 text-center">
-            <div className="w-12 h-12 rounded-full bg-green-100 text-green-800 grid place-items-center mx-auto mb-4">
+          <div className="bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all duration-300 p-6 text-center">
+            <div className="w-12 h-12 rounded-xl bg-linear-to-br from-green-400 to-green-600 text-white shadow-lg grid place-items-center mx-auto mb-4">
               <svg
                 width="20"
                 height="20"
@@ -117,8 +117,8 @@ const EventDetails: React.FC = () => {
             <p className="text-ink-60 text-[14px]">{eventDetails.date}</p>
           </div>
 
-          <div className="bg-paper border border-line rounded-[16px] p-6 text-center">
-            <div className="w-12 h-12 rounded-full bg-green-100 text-green-800 grid place-items-center mx-auto mb-4">
+          <div className="bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all duration-300 p-6 text-center">
+            <div className="w-12 h-12 rounded-xl bg-linear-to-br from-green-400 to-green-600 text-white shadow-lg grid place-items-center mx-auto mb-4">
               <svg
                 width="20"
                 height="20"
@@ -135,8 +135,8 @@ const EventDetails: React.FC = () => {
             <p className="text-ink-60 text-[14px]">{eventDetails.time}</p>
           </div>
 
-          <div className="bg-paper border border-line rounded-[16px] p-6 text-center">
-            <div className="w-12 h-12 rounded-full bg-green-100 text-green-800 grid place-items-center mx-auto mb-4">
+          <div className="bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all duration-300 p-6 text-center">
+            <div className="w-12 h-12 rounded-xl bg-linear-to-br from-green-400 to-green-600 text-white shadow-lg grid place-items-center mx-auto mb-4">
               <svg
                 width="20"
                 height="20"
@@ -153,8 +153,8 @@ const EventDetails: React.FC = () => {
             <p className="text-ink-60 text-[14px]">{eventDetails.location}</p>
           </div>
 
-          <div className="bg-paper border border-line rounded-[16px] p-6 text-center">
-            <div className="w-12 h-12 rounded-full bg-green-100 text-green-800 grid place-items-center mx-auto mb-4">
+          <div className="bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all duration-300 p-6 text-center">
+            <div className="w-12 h-12 rounded-xl bg-linear-to-br from-green-400 to-green-600 text-white shadow-lg grid place-items-center mx-auto mb-4">
               <svg
                 width="20"
                 height="20"
@@ -184,8 +184,9 @@ const EventDetails: React.FC = () => {
             {eventDetails.agenda.map((day, index) => (
               <div
                 key={index}
-                className="border border-line rounded-[16px] p-6"
+                className="group relative bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold hover:-translate-y-1 transition-all duration-500 overflow-hidden p-6"
               >
+                <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <h3 className="font-fraunces font-bold text-[20px] text-ink">
                     {day.day}
@@ -241,9 +242,9 @@ const EventDetails: React.FC = () => {
             {eventDetails.facilities.map((facility, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 p-4 bg-paper border border-line rounded-[12px]"
+                className="flex items-center gap-3 p-4 bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-xl hover:border-gold transition-all duration-300"
               >
-                <div className="w-8 h-8 rounded-full bg-green-100 text-green-800 grid place-items-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-xl bg-linear-to-br from-green-400 to-green-600 text-white shadow-lg grid place-items-center flex-shrink-0">
                   <svg
                     width="16"
                     height="16"

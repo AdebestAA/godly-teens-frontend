@@ -1,4 +1,8 @@
 @import "tailwindcss";
+/* Tailwind v4 does not auto-load tailwind.config.js the way v3 did. Without
+   this directive every custom token (gold, ink, paper, line, fonts) emits no
+   CSS at all. */
+@config "../tailwind.config.js";
 
 html {
   font-size: 15px;
@@ -39,4 +43,43 @@ html {
 }
 .animate-media-scroll:hover {
   animation-play-state: paused;
+}
+
+/* Floating WhatsApp button: gentle scale up/down + expanding halo. */
+@keyframes whatsappPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+.animate-whatsapp-pulse {
+  animation: whatsappPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes whatsappPing {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  75%,
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+.animate-whatsapp-ping {
+  animation: whatsappPing 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-whatsapp-pulse,
+  .animate-whatsapp-ping {
+    animation: none;
+  }
 }

@@ -73,7 +73,7 @@ const PastEvents: React.FC = () => {
     <section className="bg-white py-[110px] overflow-hidden" id="past-events">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-7">
         <div className="text-center mb-16">
-          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
             Past Events
           </span>
           <h2 className="font-montserrat font-extrabold text-[clamp(32px,4vw,52px)] leading-[1.05] tracking-[-0.025em] text-ink mb-6">
@@ -89,13 +89,14 @@ const PastEvents: React.FC = () => {
           {pastEvents.map((event) => (
             <article
               key={event.id}
-              className="border border-line rounded-[16px] overflow-hidden hover:shadow-lg transition-shadow"
+              className="group relative bg-white border-2 border-green-100 rounded-2xl shadow-md hover:shadow-2xl hover:border-gold hover:-translate-y-1 transition-all duration-500 overflow-hidden"
             >
+              <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-gold via-green-600 to-green-800 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 z-10" />
               <div className="h-[240px] bg-gradient-to-br from-green-600 to-green-800 relative overflow-hidden">
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">

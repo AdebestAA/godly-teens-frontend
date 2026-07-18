@@ -9,7 +9,7 @@ const About: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
     return (
       <section className="bg-white border-t border-line border-b border-line py-20" id="about">
         <div className="max-w-3xl mx-auto px-7 text-center">
-          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">
+          <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">
             About Us
           </span>
           <h1 className="font-montserrat font-extrabold text-[clamp(32px,3.5vw,48px)] leading-[1.05] tracking-tight mb-8">
@@ -41,7 +41,7 @@ const About: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
       <div className="max-w-7xl mx-auto px-7">
         <ScrollReveal direction="up">
           <div className="mb-16">
-            <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4 before:content-[''] before:w-6 before:h-0.5 before:bg-gold">About Us</span>
+            <span className="inline-flex items-center gap-2.5 text-[12px] font-semibold tracking-[0.14em] uppercase text-green-800 mb-4">About Us</span>
             <h1 className="font-montserrat font-extrabold text-[clamp(32px,3.5vw,48px)] leading-[1.05] tracking-tight mb-8">
               About Godly Teens <em className="font-fraunces italic font-medium text-green-800">International Ministry</em>
             </h1>
