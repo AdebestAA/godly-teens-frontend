@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, MapPin, Phone, X, Cpu, Users, Plane, Star } from "lucide-react";
+import { Calendar, MapPin, Phone, X, Cpu, Users } from "lucide-react";
 
 /**
  * false = the modal opens on every visit to the landing page.
@@ -15,8 +15,8 @@ const OPEN_DELAY_MS = 700;
 const HIGHLIGHTS = [
   { icon: Cpu, label: "IT & AI Training" },
   { icon: Users, label: "Soft Skills Development" },
-  { icon: Plane, label: "Holiday Excursion" },
-  { icon: Star, label: "Be Part of the Legacy" },
+  // { icon: Plane, label: "Holiday Excursion" },
+  // { icon: Star, label: "Be Part of the Legacy" },
 ];
 
 const PHONES = ["08080407207", "09067383924"];
