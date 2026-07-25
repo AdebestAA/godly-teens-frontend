@@ -229,9 +229,9 @@ const Events: React.FC<{ teaser?: boolean }> = ({ teaser = false }) => {
 
         <ScrollReveal direction="up">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div className="h-70 bg-linear-to-br from-green-600 to-green-800 rounded-2xl relative flex items-start justify-start p-6">
-              <span className="inline-flex px-3 py-1.5 text-[11px] font-bold text-white bg-green-900 rounded-full">
-                Annual Summit
+            <div className="h-70 bg-linear-to-br flex items-center justify-center from-green-600 to-green-800 rounded-2xl relative  p-6">
+              <span className="inline-flex px-3 py-1.5 text-[25px] font-bold text-white  rounded-full">
+                TBA
               </span>
             </div>
             <div className="flex flex-col justify-center">
