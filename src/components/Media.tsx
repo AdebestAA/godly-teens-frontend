@@ -3,9 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Curated selection of optimized event photos (public/images/optimized).
 const OPTIMIZED = [
-  "IMG-20260715-WA0004",
   "IMG-20260715-WA0006",
-  "IMG-20260715-WA0009",
+
   "IMG-20260715-WA0012",
   "IMG-20260715-WA0015",
   "IMG-20260715-WA0018",
@@ -49,7 +48,7 @@ const IMAGES = [
 
 // Bento span pattern: feature / tall / wide / small tiles. grid-flow-dense
 // backfills gaps so there are no holes.
-const VISIBLE_COUNT = 8;
+const VISIBLE_COUNT = 7;
 const previewImages = IMAGES.slice(0, VISIBLE_COUNT);
 const SPANS = [
   "col-span-2 row-span-2",
