@@ -6,7 +6,7 @@ const MediaPage: React.FC = () => {
   return (
     <div>
       <Media />
-      <Blog />
+      {/* <Blog /> */}
     </div>
   );
 };
