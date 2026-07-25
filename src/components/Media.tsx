@@ -25,7 +25,7 @@ const OPTIMIZED = [
 
 // Original Cloudinary photos that used to live in this section.
 const CLOUDINARY = [
-  "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155928/photo-two-2022_puhj2p.jpg",
+  // "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155928/photo-two-2022_puhj2p.jpg",
   "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155934/photo-three-2022_cw9jb1.jpg",
   "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155925/photo-four-2022_do9btl.jpg",
   "https://res.cloudinary.com/daqkjbrrs/image/upload/q_auto,f_auto/v1780155927/photo-one-2022_tlolou.jpg",
@@ -34,8 +34,8 @@ const CLOUDINARY = [
 
 // Interleave the Cloudinary shots into the grid so they don't clump together.
 const IMAGES = [
-  ...OPTIMIZED.slice(0, 3),
   CLOUDINARY[0],
+  ...OPTIMIZED.slice(0, 3),
   ...OPTIMIZED.slice(3, 6),
   CLOUDINARY[1],
   ...OPTIMIZED.slice(6, 9),
@@ -49,13 +49,15 @@ const IMAGES = [
 
 // Bento span pattern: feature / tall / wide / small tiles. grid-flow-dense
 // backfills gaps so there are no holes.
+const VISIBLE_COUNT = 8;
+const previewImages = IMAGES.slice(0, VISIBLE_COUNT);
 const SPANS = [
-  "col-span-2 row-span-2", // large feature
+  "col-span-2 row-span-2",
   "col-span-1 row-span-1",
   "col-span-1 row-span-1",
-  "col-span-1 row-span-2", // tall
+  "col-span-1 row-span-2",
   "col-span-1 row-span-1",
-  "col-span-2 row-span-1", // wide
+  "col-span-2 row-span-1",
   "col-span-1 row-span-1",
 ];
 
@@ -64,7 +66,10 @@ const Media: React.FC = () => {
 
   const close = useCallback(() => setIndex(null), []);
   const prev = useCallback(
-    () => setIndex((i) => (i === null ? i : (i - 1 + IMAGES.length) % IMAGES.length)),
+    () =>
+      setIndex((i) =>
+        i === null ? i : (i - 1 + IMAGES.length) % IMAGES.length,
+      ),
     [],
   );
   const next = useCallback(
@@ -91,7 +96,7 @@ const Media: React.FC = () => {
     <section className="bg-white py-[110px] overflow-hidden" id="media">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-7">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 auto-rows-[140px] sm:auto-rows-[170px] lg:auto-rows-[200px] grid-flow-dense">
-          {IMAGES.map((src, i) => (
+          {previewImages.map((src, i) => (
             <motion.button
               key={src}
               initial={{ opacity: 0, y: 24 }}
@@ -107,16 +112,40 @@ const Media: React.FC = () => {
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.07]"
               />
-              {/* Hover darken */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300" />
-              {/* Expand icon */}
               <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="2.2"
+                >
                   <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
                 </svg>
               </div>
             </motion.button>
           ))}
+        </div>
+
+        <div className="text-center mt-8">
+          <button
+            onClick={() => setIndex(0)}
+            className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-semibold text-green-800 border border-line rounded-[10px] hover:border-green-800 hover:bg-green-50 transition-all"
+          >
+            See all {IMAGES.length} photos
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+            >
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
 
@@ -135,27 +164,54 @@ const Media: React.FC = () => {
               className="absolute top-4 right-4 z-10 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
               aria-label="Close"
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <path d="M18 6L6 18M6 6l12 12" />
               </svg>
             </button>
 
             <button
-              onClick={(e) => { e.stopPropagation(); prev(); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                prev();
+              }}
               className="absolute left-3 sm:left-6 z-10 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
               aria-label="Previous"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <path d="M15 18l-6-6 6-6" />
               </svg>
             </button>
 
             <button
-              onClick={(e) => { e.stopPropagation(); next(); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                next();
+              }}
               className="absolute right-3 sm:right-6 z-10 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
               aria-label="Next"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <path d="M9 18l6-6-6-6" />
               </svg>
             </button>

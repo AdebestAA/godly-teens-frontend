@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react";
+import { motion } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 
 interface Testimony {
@@ -340,14 +341,17 @@ const Testimonies: React.FC = () => {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal
-          direction="up"
-          staggerDelay={0.15}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start"
-        >
-          {visible.map((t) => (
-            <article
+        {/* Each card owns its reveal animation. A shared ScrollReveal wrapper
+            fires whileInView only once, so cards revealed later by the
+            "read all" toggle would mount stuck at opacity 0. */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {visible.map((t, i) => (
+            <motion.article
               key={t.id}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.45, delay: (i % 3) * 0.08 }}
               className="group relative flex flex-col h-full bg-white border-2 border-green-100 rounded-2xl p-7 pt-8 shadow-md hover:shadow-2xl hover:border-gold hover:-translate-y-1 transition-all duration-500 overflow-hidden"
             >
               {/* Gradient accent bar */}
@@ -393,9 +397,9 @@ const Testimonies: React.FC = () => {
                   {t.name}
                 </strong>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </ScrollReveal>
+        </div>
 
         {hasMore && (
           <div className="text-center mt-12">
