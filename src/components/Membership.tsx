@@ -48,12 +48,12 @@ const Membership: React.FC = () => {
       description:
         "Connect with spiritual mentors and leaders for personal guidance.",
     },
-    {
-      icon: "target",
-      title: "Personal Dashboard",
-      description:
-        "Track your spiritual journey, event registrations, and community involvement.",
-    },
+    // {
+    //   icon: "target",
+    //   title: "Personal Dashboard",
+    //   description:
+    //     "Track your spiritual journey, event registrations, and community involvement.",
+    // },
     {
       icon: "sparkles",
       title: "Leadership Opportunities",
